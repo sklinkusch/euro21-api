@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = 3000;
 
 const WM2022 = require("./data/worldcup_m_2022.json")
 
