@@ -1,8 +1,17 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
 const WM2022 = require("./data/worldcup_m_2022.json")
+
+const corsOptions = {
+  origin: function(origin, callback) {
+    callback(null, true);
+  }
+};
+
+app.use(cors(corsOptions));
 
 app.get("/worldcup", (req, res) => getWorldCupData(req, res));
 // app.get("/euro", (req, res) => getEuroData(req, res));
