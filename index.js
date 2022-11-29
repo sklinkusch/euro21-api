@@ -11,7 +11,9 @@ app.get("*", (req, res) => wrongEndpoint(req, res));
 app.listen(port, () => console.log(`Euro21-API listening on port ${port}...`));
 
 function getWorldCupData(req, res) {
-  const { year } = req.query
+  const { year } = req.query;
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Content-Type', 'application/json');
   switch (year) {
     case "2022":
       return res.status(200).json(WM2022);
