@@ -16,7 +16,7 @@ function getWorldCupData(req, res) {
   res.setHeader('Content-Type', 'application/json');
   switch (year) {
     case "2022":
-      return res.status(200).json(WM2022);
+      return res.json(WM2022);
     default:
       return res.status(500).json({ error: { message: "The data cannot be provided." }});
   }
