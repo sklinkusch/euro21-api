@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
-const WM2022 = require("./data/worldcup_m_2022.json")
+const WM2022 = require("../data/worldcup_m_2022.json")
 
 const corsOptions = {
   origin: function(origin, callback) {
@@ -30,3 +30,5 @@ function getWorldCupData(req, res) {
       return res.status(500).json({ error: { message: "The data cannot be provided." }});
   }
 }
+
+module.exports = app;
