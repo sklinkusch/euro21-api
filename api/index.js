@@ -6,6 +6,7 @@ const app = express();
 const WM2022 = require("../data/worldcup_m_2022.json")
 
 const corsOptions = {
+  console.log("entering corsOptions")
   origin: function(origin, callback) {
     callback(null, true);
   }
