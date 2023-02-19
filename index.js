@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3500;
 
-const WM2022 = require("./data/worldcup_m_2022.json")
+const WM2022 = require("./data/worldcup_m_2022.js")
 
 const useCors = (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -19,10 +19,10 @@ app.get("*", (req, res) => wrongEndpoint(req, res));
 app.listen(port, () => console.log(`Euro21-API listening on port ${port}...`));
 
 function getWorldCupData(req, res) {
-  const { year } = req.query;
+  const { year, lang } = req.query;
   switch (year) {
     case "2022":
-      return res.status(200).json(WM2022);
+      return res.status(200).json(WM2022(lang));
     default:
       return res.status(500).json({ error: { message: "The data cannot be provided." }});
   }

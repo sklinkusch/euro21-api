@@ -1,4 +1,7 @@
-{
+const { localeName } = require("./helpers")
+
+const matchData = (lang) => {
+	return {
 	"groups": {
 		"A": [
 			{
@@ -65,14 +68,14 @@
 			},
 			{
 				"teams": ["GB-WLS", "GB-ENG"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [0, 3],
+				"fairPlay": [2, 0],
 				"date": "2022-11-29T19:00:00Z"
 			},
 			{
 				"teams": ["IR", "US"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [0, 1],
+				"fairPlay": [3, 1],
 				"date": "2022-11-29T19:00:00Z"
 			}
 		],
@@ -103,14 +106,14 @@
 			},
 			{
 				"teams": ["PL", "AR"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [0, 2],
+				"fairPlay": [1, 1],
 				"date": "2022-11-30T19:00:00Z"
 			},
 			{
 				"teams": ["SA", "MX"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [1, 2],
+				"fairPlay": [6, 1],
 				"date": "2022-11-30T19:00:00Z"
 			}
 		],
@@ -141,14 +144,14 @@
 			},
 			{
 				"teams": ["TN", "FR"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [1, 0],
+				"fairPlay": [1, 0],
 				"date": "2022-11-30T15:00:00Z"
 			},
 			{
 				"teams": ["AU", "DK"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [1, 0],
+				"fairPlay": [2, 1],
 				"date": "2022-11-30T15:00:00Z"
 			}
 		],
@@ -179,14 +182,14 @@
 			},
 			{
 				"teams": ["JP", "ES"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [2, 1],
+				"fairPlay": [3, 0],
 				"date": "2022-12-01T19:00:00Z"
 			},
 			{
 				"teams": ["CR", "DE"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [2, 4],
+				"fairPlay": [1, 0],
 				"date": "2022-12-01T19:00:00Z"
 			}
 		],
@@ -217,14 +220,14 @@
 			},
 			{
 				"teams": ["HR", "BE"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [0, 0],
+				"fairPlay": [0, 1],
 				"date": "2022-12-01T16:00:00Z"
 			},
 			{
 				"teams": ["CA", "MA"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [1, 2],
+				"fairPlay": [4, 0],
 				"date": "2022-12-01T16:00:00Z"
 			}
 		],
@@ -255,14 +258,14 @@
 			},
 			{
 				"teams": ["CM", "BR"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [1, 0],
+				"fairPlay": [5, 2],
 				"date": "2022-12-02T19:00:00Z"
 			},
 			{
 				"teams": ["RS", "CH"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [2, 3],
+				"fairPlay": [6, 4],
 				"date": "2022-12-02T19:00:00Z"
 			}
 		],
@@ -293,102 +296,105 @@
 			},
 			{
 				"teams": ["KR", "PT"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [2, 1],
+				"fairPlay": [2, 0],
 				"date": "2022-12-02T15:00:00Z"
 			},
 			{
 				"teams": ["GH", "UY"],
-				"goals": [null, null],
-				"fairPlay": [null, null],
+				"goals": [0, 2],
+				"fairPlay": [2, 4],
 				"date": "2022-12-02T15:00:00Z"
 			}
 		]
 	},
 	"AF": [
 		{
-			"goals": [null, null],
+			"goals": [3, 1],
 			"add": null,
 			"date": "2022-12-03T15:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [2, 1],
 			"add": null,
 			"date": "2022-12-03T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [3, 1],
 			"add": null,
 			"date": "2022-12-05T15:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [3, 0],
 			"add": null,
 			"date": "2022-12-05T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
-			"add": null,
+			"goals": [1, 3],
+			"add": `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`,
 			"date": "2022-12-04T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [4, 1],
 			"add": null,
 			"date": "2022-12-04T15:00:00Z"
 		},
 		{
-			"goals": [null, null],
-			"add": null,
+			"goals": [3, 0],
+			"add": `${localeName("Penalties", lang)}, 0:0 (0:0) ${localeName("ExtraTime", lang)}`,
 			"date": "2022-12-06T15:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [0, 1],
 			"add": null,
 			"date": "2022-12-06T19:00:00Z"
 		}
 	],
 	"VF": [
 		{
-			"goals": [null, null],
-			"add": null,
+			"goals": [4, 2],
+			"add": `${localeName("Penalties")}, 1:1 (0:0) ${localeName("ExtraTime")}`,
 			"date": "2022-12-09T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
-			"add": null,
+			"goals": [3, 4],
+			"add": `${localeName("Penalties")}, 2:2 (2:2) ${localeName("ExtraTime")}`,
 			"date": "2022-12-10T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [1, 0],
 			"add": null,
 			"date": "2022-12-09T15:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [1, 2],
 			"add": null,
 			"date": "2022-12-10T15:00:00Z"
 		}
 	],
 	"HF": [
 		{
-			"goals": [null, null],
+			"goals": [3, 0],
 			"add": null,
 			"date": "2022-12-13T19:00:00Z"
 		},
 		{
-			"goals": [null, null],
+			"goals": [2, 0],
 			"add": null,
 			"date": "2022-12-14T19:00:00Z"
 		}
 	],
 	"3P": {
-		"goals": [null, null],
+		"goals": [2, 1],
 		"add": null,
 		"date": "2022-12-17T15:00:00Z"
 	},
 	"F": {
-		"goals": [null, null],
-		"add": null,
+		"goals": [4, 2],
+		"add": `${localeName("Penalties")}, 3:3 (2:2) ${localeName("ExtraTime")}`,
 		"date": "2022-12-18T15:00:00Z"
 	}
 }
+}
+
+module.exports = matchData;
