@@ -4,12 +4,13 @@ function getKoTeam(teams, goals) {
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
       return teams[0];
-    } else if (goals[1] > goals[2]) {
+    } else if (goals[1] > goals[0]) {
       return teams[1];
     } else {
       return [...teams[0], ...teams[1]];
     }
   }
+  console.log("no numbers");
   return [...teams[0], ...teams[1]];
 }
 
@@ -683,13 +684,58 @@ const first = mergedGroupTables.map((group) => group[0].team);
 const second = mergedGroupTables.map((group) => group[1].team);
 
 const teamsAF1 = [first[0], second[1]];
+const goalsAF1 = [3, 1];
+const addAF1 = (lang) => null;
 const teamsAF2 = [first[2], second[3]];
+const goalsAF2 = [2, 1];
+const addAF2 = (lang) => null;
 const teamsAF3 = [first[3], second[2]];
+const goalsAF3 = [3, 1];
+const addAF3 = (lang) => null;
 const teamsAF4 = [first[1], second[0]];
+const goalsAF4 = [3, 0];
+const addAF4 = (lang) => null;
 const teamsAF5 = [first[4], second[5]];
+const goalsAF5 = [1, 3];
+const addAF5 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName(
+    "ExtraTime",
+    lang
+  )}`;
 const teamsAF6 = [first[6], second[7]];
+const goalsAF6 = [4, 1];
+const addAF6 = (lang) => null;
 const teamsAF7 = [first[5], second[4]];
+const goalsAF7 = [3, 0];
+const addAF7 = (lang) =>
+  `${localeName("Penalties", lang)}, 0:0 (0:0) ${localeName(
+    "ExtraTime",
+    lang
+  )}`;
 const teamsAF8 = [first[7], second[6]];
+const goalsAF8 = [6, 1];
+const addAF8 = (lang) => null;
+
+const teamsVF1 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF6, goalsAF6)];
+const goalsVF1 = [4, 2];
+const addVF1 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (0:0) ${localeName(
+    "ExtraTime",
+    lang
+  )}`;
+const teamsVF2 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF2, goalsAF2)];
+const goalsVF2 = [3, 4];
+const addVF2 = (lang) =>
+  `${localeName("Penalties", lang)}, 2:2 (2:2) ${localeName(
+    "ExtraTime",
+    lang
+  )}`;
+const teamsVF3 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
+const goalsVF3 = [1, 0];
+const addVF3 = (lang) => null;
+const teamsVF4 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF3, goalsAF3)];
+const goalsVF4 = [1, 2];
+const addVF4 = (lang) => null;
 
 const matchData = (lang) => {
   return {
@@ -730,78 +776,76 @@ const matchData = (lang) => {
     AF: [
       {
         teams: teamsAF1,
-        goals: [3, 1],
-        add: null,
+        goals: goalsAF1,
+        add: addAF1(lang),
         date: "2022-12-03T15:00:00Z"
       },
       {
         teams: teamsAF2,
-        goals: [2, 1],
-        add: null,
+        goals: goalsAF2,
+        add: addAF2(lang),
         date: "2022-12-03T19:00:00Z"
       },
       {
         teams: teamsAF3,
-        goals: [3, 1],
-        add: null,
+        goals: goalsAF3,
+        add: addAF3(lang),
         date: "2022-12-05T15:00:00Z"
       },
       {
         teams: teamsAF4,
-        goals: [3, 0],
-        add: null,
+        goals: goalsAF4,
+        add: addAF4(lang),
         date: "2022-12-05T19:00:00Z"
       },
       {
         teams: teamsAF5,
-        goals: [1, 3],
-        add: `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName(
-          "ExtraTime",
-          lang
-        )}`,
+        goals: goalsAF5,
+        add: addAF5(lang),
         date: "2022-12-04T19:00:00Z"
       },
       {
         teams: teamsAF6,
-        goals: [4, 1],
-        add: null,
+        goals: goalsAF6,
+        add: addAF6(lang),
         date: "2022-12-04T15:00:00Z"
       },
       {
         teams: teamsAF7,
-        goals: [3, 0],
-        add: `${localeName("Penalties", lang)}, 0:0 (0:0) ${localeName(
-          "ExtraTime",
-          lang
-        )}`,
+        goals: goalsAF7,
+        add: addAF7(lang),
         date: "2022-12-06T15:00:00Z"
       },
       {
         teams: teamsAF8,
-        goals: [0, 1],
-        add: null,
+        goals: goalsAF8,
+        add: addAF8(lang),
         date: "2022-12-06T19:00:00Z"
       }
     ],
     VF: [
       {
-        goals: [4, 2],
-        add: `${localeName("Penalties")}, 1:1 (0:0) ${localeName("ExtraTime")}`,
+        teams: teamsVF1,
+        goals: goalsVF1,
+        add: addVF1(lang),
         date: "2022-12-09T19:00:00Z"
       },
       {
-        goals: [3, 4],
-        add: `${localeName("Penalties")}, 2:2 (2:2) ${localeName("ExtraTime")}`,
+        teams: teamsVF2,
+        goals: goalsVF2,
+        add: addVF2(lang),
         date: "2022-12-10T19:00:00Z"
       },
       {
-        goals: [1, 0],
-        add: null,
+        teams: teamsVF3,
+        goals: goalsVF3,
+        add: addVF3(lang),
         date: "2022-12-09T15:00:00Z"
       },
       {
-        goals: [1, 2],
-        add: null,
+        teams: teamsVF4,
+        goals: goalsVF4,
+        add: addVF4(lang),
         date: "2022-12-10T15:00:00Z"
       }
     ],
