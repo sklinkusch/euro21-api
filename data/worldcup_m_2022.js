@@ -655,6 +655,20 @@ const groupHMatches = [
 
 const groupHTable = makeTable(groupHMatches, "H");
 
+const mergedGroupTables = [
+  groupATable,
+  groupBTable,
+  groupCTable,
+  groupDTable,
+  groupETable,
+  groupFTable,
+  groupGTable,
+  groupHTable
+];
+
+const first = mergedGroupTables.map((group) => group[0].team);
+const second = mergedGroupTables.map((group) => group[1].team);
+
 const matchData = (lang) => {
   return {
     groups: {
@@ -693,26 +707,31 @@ const matchData = (lang) => {
     },
     AF: [
       {
+        teams: [first[0], second[1]],
         goals: [3, 1],
         add: null,
         date: "2022-12-03T15:00:00Z"
       },
       {
+        teams: [first[2], second[3]],
         goals: [2, 1],
         add: null,
         date: "2022-12-03T19:00:00Z"
       },
       {
+        teams: [first[3], second[2]],
         goals: [3, 1],
         add: null,
         date: "2022-12-05T15:00:00Z"
       },
       {
+        teams: [first[1], second[0]],
         goals: [3, 0],
         add: null,
         date: "2022-12-05T19:00:00Z"
       },
       {
+        teams: [first[4], second[5]],
         goals: [1, 3],
         add: `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName(
           "ExtraTime",
@@ -721,11 +740,13 @@ const matchData = (lang) => {
         date: "2022-12-04T19:00:00Z"
       },
       {
+        teams: [first[6], second[7]],
         goals: [4, 1],
         add: null,
         date: "2022-12-04T15:00:00Z"
       },
       {
+        teams: [first[5], second[4]],
         goals: [3, 0],
         add: `${localeName("Penalties", lang)}, 0:0 (0:0) ${localeName(
           "ExtraTime",
@@ -734,6 +755,7 @@ const matchData = (lang) => {
         date: "2022-12-06T15:00:00Z"
       },
       {
+        teams: [first[7], second[6]],
         goals: [0, 1],
         add: null,
         date: "2022-12-06T19:00:00Z"
