@@ -1,5 +1,18 @@
 const { localeName } = require("./helpers");
 
+function getKoTeam(teams, goals) {
+  if (typeof goals[0] === "number" && typeof goals[1] === "number") {
+    if (goals[0] > goals[1]) {
+      return teams[0];
+    } else if (goals[1] > goals[2]) {
+      return teams[1];
+    } else {
+      return [...teams[0], ...teams[1]];
+    }
+  }
+  return [...teams[0], ...teams[1]];
+}
+
 function sortFunction(teamData, mode) {
   const points = Array.from(new Set(teamData.map((team) => team.points))).sort(
     (a, b) => b - a
@@ -669,6 +682,15 @@ const mergedGroupTables = [
 const first = mergedGroupTables.map((group) => group[0].team);
 const second = mergedGroupTables.map((group) => group[1].team);
 
+const teamsAF1 = [first[0], second[1]];
+const teamsAF2 = [first[2], second[3]];
+const teamsAF3 = [first[3], second[2]];
+const teamsAF4 = [first[1], second[0]];
+const teamsAF5 = [first[4], second[5]];
+const teamsAF6 = [first[6], second[7]];
+const teamsAF7 = [first[5], second[4]];
+const teamsAF8 = [first[7], second[6]];
+
 const matchData = (lang) => {
   return {
     groups: {
@@ -707,31 +729,31 @@ const matchData = (lang) => {
     },
     AF: [
       {
-        teams: [first[0], second[1]],
+        teams: teamsAF1,
         goals: [3, 1],
         add: null,
         date: "2022-12-03T15:00:00Z"
       },
       {
-        teams: [first[2], second[3]],
+        teams: teamsAF2,
         goals: [2, 1],
         add: null,
         date: "2022-12-03T19:00:00Z"
       },
       {
-        teams: [first[3], second[2]],
+        teams: teamsAF3,
         goals: [3, 1],
         add: null,
         date: "2022-12-05T15:00:00Z"
       },
       {
-        teams: [first[1], second[0]],
+        teams: teamsAF4,
         goals: [3, 0],
         add: null,
         date: "2022-12-05T19:00:00Z"
       },
       {
-        teams: [first[4], second[5]],
+        teams: teamsAF5,
         goals: [1, 3],
         add: `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName(
           "ExtraTime",
@@ -740,13 +762,13 @@ const matchData = (lang) => {
         date: "2022-12-04T19:00:00Z"
       },
       {
-        teams: [first[6], second[7]],
+        teams: teamsAF6,
         goals: [4, 1],
         add: null,
         date: "2022-12-04T15:00:00Z"
       },
       {
-        teams: [first[5], second[4]],
+        teams: teamsAF7,
         goals: [3, 0],
         add: `${localeName("Penalties", lang)}, 0:0 (0:0) ${localeName(
           "ExtraTime",
@@ -755,7 +777,7 @@ const matchData = (lang) => {
         date: "2022-12-06T15:00:00Z"
       },
       {
-        teams: [first[7], second[6]],
+        teams: teamsAF8,
         goals: [0, 1],
         add: null,
         date: "2022-12-06T19:00:00Z"
