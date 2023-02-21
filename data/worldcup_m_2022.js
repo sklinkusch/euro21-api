@@ -1,5 +1,18 @@
 const { localeName } = require("./helpers");
 
+function getLoser(teams, goals) {
+  if (typeof goals[0] === "number" && typeof goals[1] === "number") {
+    if (goals[0] > goals[1]) {
+      return teams[1];
+    } else if (goals[1] > goals[0]) {
+      return teams[0];
+    } else {
+      return [...teams[0], ...teams[1]];
+    }
+  }
+  return [...teams[0], ...teams[1]];
+}
+
 function getKoTeam(teams, goals) {
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
@@ -10,7 +23,6 @@ function getKoTeam(teams, goals) {
       return [...teams[0], ...teams[1]];
     }
   }
-  console.log("no numbers");
   return [...teams[0], ...teams[1]];
 }
 
@@ -744,6 +756,17 @@ const teamsHF2 = [getKoTeam(teamsVF4, goalsVF4), getKoTeam(teamsVF3, goalsVF3)];
 const goalsHF2 = [2, 0];
 const addHF2 = (lang) => null;
 
+const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
+const goals3P = [2, 1];
+const add3P = (lang) => null;
+
+const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
+const goalsF = [4, 2];
+const addF = (lang) =>
+  `${localeName("Penalties")}, 3:3 (2:2) ${localeName("ExtraTime")}`;
+
+const champion = getKoTeam(teamsF, goalsF);
+
 const matchData = (lang) => {
   return {
     groups: {
@@ -871,15 +894,18 @@ const matchData = (lang) => {
       }
     ],
     "3P": {
-      goals: [2, 1],
-      add: null,
+      teams: teams3P,
+      goals: goals3P,
+      add: add3P(lang),
       date: "2022-12-17T15:00:00Z"
     },
     F: {
-      goals: [4, 2],
-      add: `${localeName("Penalties")}, 3:3 (2:2) ${localeName("ExtraTime")}`,
+      teams: teamsF,
+      goals: goalsF,
+      add: addF(lang),
       date: "2022-12-18T15:00:00Z"
-    }
+    },
+    champion: champion
   };
 };
 
