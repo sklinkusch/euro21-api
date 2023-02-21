@@ -737,6 +737,13 @@ const teamsVF4 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF3, goalsAF3)];
 const goalsVF4 = [1, 2];
 const addVF4 = (lang) => null;
 
+const teamsHF1 = [getKoTeam(teamsVF2, goalsVF2), getKoTeam(teamsVF1, goalsVF1)];
+const goalsHF1 = [3, 0];
+const addHF1 = (lang) => null;
+const teamsHF2 = [getKoTeam(teamsVF4, goalsVF4), getKoTeam(teamsVF3, goalsVF3)];
+const goalsHF2 = [2, 0];
+const addHF2 = (lang) => null;
+
 const matchData = (lang) => {
   return {
     groups: {
@@ -851,13 +858,15 @@ const matchData = (lang) => {
     ],
     HF: [
       {
-        goals: [3, 0],
-        add: null,
+        teams: teamsHF1,
+        goals: goalsHF1,
+        add: addHF1(lang),
         date: "2022-12-13T19:00:00Z"
       },
       {
-        goals: [2, 0],
-        add: null,
+        teams: teamsHF2,
+        goals: goalsHF2,
+        add: addHF2(lang),
         date: "2022-12-14T19:00:00Z"
       }
     ],
