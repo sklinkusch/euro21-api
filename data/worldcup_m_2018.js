@@ -1,121 +1,41 @@
 const { localeName, makeTable, getKoTeam, getLoser } = require("./helpers");
 
-/*
-export const matchaf = [
-  {
-    goals: [4, 3],
-    add: null,
-    date: "2018-06-30T14:00:00Z"
-  },
-  {
-    goals: [2, 1],
-    add: null,
-    date: "2018-06-30T18:00:00Z"
-  },
-  {
-    goals: [3, 4],
-    add: `${localeName("Penalties")} 1:1 (1:1) ${localeName("ExtraTime")}`,
-    date: "2018-07-01T14:00:00Z"
-  },
-  {
-    goals: [3, 2],
-    add: `${localeName("Penalties")} 1:1 (1:1) ${localeName("ExtraTime")}`,
-    date: "2018-07-01T18:00:00Z"
-  },
-  {
-    goals: [2, 0],
-    add: null,
-    date: "2018-07-02T14:00:00Z"
-  },
-  {
-    goals: [3, 2],
-    add: null,
-    date: "2018-07-02T18:00:00Z"
-  },
-  {
-    goals: [1, 0],
-    add: null,
-    date: "2018-07-03T14:00:00Z"
-  },
-  {
-    goals: [3, 4],
-    add: `${localeName("Penalties")} 1:1 (1:1) ${localeName("ExtraTime")}`,
-    date: "2018-07-03T18:00:00Z"
-  },
-]
-
-export const matchvf = [
-  {
-    goals: [0, 2],
-    add: null
-  },
-  {
-    goals: [1, 2],
-    add: null
-  },
-  {
-    goals: [0, 2],
-    add: null
-  },
-  {
-    goals: [3, 4],
-    add: `${localeName("Penalties")} 2:2 ${localeName("ExtraTime")}`
-  },
-]
-
-export const matchhf = [
-  {
-    goals: [1, 0],
-    add: null
-  },
-  {
-    goals: [2, 1],
-    add: localeName("ExtraTime")
-  },
-]
-
-export const match3p = {
-    goals: [2, 0],
-    add: null
-}
-
-
-export const matchf = {
-    goals: [4, 2],
-    add: null
-}
-*/
-
 const groupAMatches = [
   {
     teams: ["RU", "SA"],
     goals: [5, 0],
-    fairPlay: [1, 1]
+    fairPlay: [1, 1],
+    date: "2018-06-14T15:00:00Z"
   },
   {
     teams: ["EG", "UY"],
     goals: [0, 1],
-    fairPlay: [2, 0]
+    fairPlay: [2, 0],
+    date: "2018-06-15T12:00:00Z"
   },
   {
     teams: ["RU", "EG"],
     goals: [3, 1],
-    fairPlay: [1, 1]
+    fairPlay: [1, 1],
+    date: "2018-06-19T18:00:00Z"
   },
   {
     teams: ["UY", "SA"],
     goals: [1, 0],
-    fairPlay: [0, 0]
+    fairPlay: [0, 0],
+    date: "2018-06-20T15:00:00Z"
   },
   {
     teams: ["UY", "RU"],
     goals: [3, 0],
-    fairPlay: [1, 4]
+    fairPlay: [1, 4],
+    date: "2018-06-25T14:00:00Z"
   },
   {
     teams: ["SA", "EG"],
     goals: [2, 1],
-    fairPlay: [0, 2]
+    fairPlay: [0, 2],
+    date: "2018-06-25T14:00:00Z"
   }
 ];
 
@@ -125,32 +45,38 @@ const groupBMatches = [
   {
     teams: ["MA", "IR"],
     goals: [0, 1],
-    fairPlay: [1, 3]
+    fairPlay: [1, 3],
+    date: "2018-06-15T15:00:00Z"
   },
   {
     teams: ["PT", "ES"],
     goals: [3, 3],
-    fairPlay: [1, 1]
+    fairPlay: [1, 1],
+    date: "2018-06-15T18:00:00Z"
   },
   {
     teams: ["PT", "MA"],
     goals: [1, 0],
-    fairPlay: [1, 1]
+    fairPlay: [1, 1],
+    date: "2018-06-20T12:00:00Z"
   },
   {
     teams: ["IR", "ES"],
     goals: [0, 1],
-    fairPlay: [2, 0]
+    fairPlay: [2, 0],
+    date: "2018-06-20T18:00:00Z"
   },
   {
     teams: ["IR", "PT"],
     goals: [1, 1],
-    fairPlay: [2, 4]
+    fairPlay: [2, 4],
+    date: "2018-06-25T18:00:00Z"
   },
   {
     teams: ["ES", "MA"],
     goals: [2, 2],
-    fairPlay: [0, 6]
+    fairPlay: [0, 6],
+    date: "2018-06-25T18:00:00Z"
   }
 ];
 
@@ -160,32 +86,38 @@ const groupCMatches = [
   {
     teams: ["FR", "AU"],
     goals: [2, 1],
-    fairPlay: [1, 3]
+    fairPlay: [1, 3],
+    date: "2018-06-16T10:00:00Z"
   },
   {
     teams: ["PE", "DK"],
     goals: [0, 1],
-    fairPlay: [1, 2]
+    fairPlay: [1, 2],
+    date: "2018-06-16T16:00:00Z"
   },
   {
     teams: ["DK", "AU"],
     goals: [1, 1],
-    fairPlay: [2, 0]
+    fairPlay: [2, 0],
+    date: "2018-06-21T12:00:00Z"
   },
   {
     teams: ["FR", "PE"],
     goals: [1, 0],
-    fairPlay: [2, 2]
+    fairPlay: [2, 2],
+    date: "2018-06-21T15:00:00Z"
   },
   {
     teams: ["DK", "FR"],
     goals: [0, 0],
-    fairPlay: [1, 0]
+    fairPlay: [1, 0],
+    date: "2018-06-26T14:00:00Z"
   },
   {
     teams: ["AU", "PE"],
     goals: [0, 2],
-    fairPlay: [4, 2]
+    fairPlay: [4, 2],
+    date: "2018-06-26T14:00:00Z"
   }
 ];
 
@@ -195,32 +127,38 @@ const groupDMatches = [
   {
     teams: ["AR", "IS"],
     goals: [1, 1],
-    fairPlay: [0, 0]
+    fairPlay: [0, 0],
+    date: "2018-06-16T13:00:00Z"
   },
   {
     teams: ["HR", "NG"],
     goals: [2, 0],
-    fairPlay: [2, 1]
+    fairPlay: [2, 1],
+    date: "2018-06-16T19:00:00Z"
   },
   {
     teams: ["AR", "HR"],
     goals: [0, 3],
-    fairPlay: [3, 4]
+    fairPlay: [3, 4],
+    date: "2018-06-21T18:00:00Z"
   },
   {
     teams: ["NG", "IS"],
     goals: [2, 0],
-    fairPlay: [1, 0]
+    fairPlay: [1, 0],
+    date: "2018-06-22T15:00:00Z"
   },
   {
     teams: ["NG", "AR"],
     goals: [1, 2],
-    fairPlay: [2, 3]
+    fairPlay: [2, 3],
+    date: "2018-06-26T18:00:00Z"
   },
   {
     teams: ["IS", "HR"],
     goals: [1, 2],
-    fairPlay: [3, 2]
+    fairPlay: [3, 2],
+    date: "2018-06-26T18:00:00Z"
   }
 ];
 
@@ -230,32 +168,38 @@ const groupEMatches = [
   {
     teams: ["CR", "RS"],
     goals: [0, 1],
-    fairPlay: [2, 2]
+    fairPlay: [2, 2],
+    date: "2018-06-17T12:00:00Z"
   },
   {
     teams: ["BR", "CH"],
     goals: [1, 1],
-    fairPlay: [1, 3]
+    fairPlay: [1, 3],
+    date: "2018-06-17T18:00:00Z"
   },
   {
     teams: ["BR", "CR"],
     goals: [2, 0],
-    fairPlay: [2, 1]
+    fairPlay: [2, 1],
+    date: "2018-06-22T12:00:00Z"
   },
   {
     teams: ["RS", "CH"],
     goals: [1, 2],
-    fairPlay: [4, 1]
+    fairPlay: [4, 1],
+    date: "2018-06-22T18:00:00Z"
   },
   {
     teams: ["RS", "BR"],
     goals: [0, 2],
-    fairPlay: [3, 0]
+    fairPlay: [3, 0],
+    date: "2018-06-27T18:00:00Z"
   },
   {
     teams: ["CH", "CR"],
     goals: [2, 2],
-    fairPlay: [3, 3]
+    fairPlay: [3, 3],
+    date: "2018-06-27T18:00:00Z"
   }
 ];
 
@@ -265,32 +209,38 @@ const groupFMatches = [
   {
     teams: ["DE", "MX"],
     goals: [0, 1],
-    fairPlay: [2, 2]
+    fairPlay: [2, 2],
+    date: "2018-06-17T15:00:00Z"
   },
   {
     teams: ["SE", "KR"],
     goals: [1, 0],
-    fairPlay: [1, 2]
+    fairPlay: [1, 2],
+    date: "2018-06-18T12:00:00Z"
   },
   {
     teams: ["KR", "MX"],
     goals: [1, 2],
-    fairPlay: [4, 0]
+    fairPlay: [4, 0],
+    date: "2018-06-23T15:00:00Z"
   },
   {
     teams: ["DE", "SE"],
     goals: [2, 1],
-    fairPlay: [3, 2]
+    fairPlay: [3, 2],
+    date: "2018-06-23T18:00:00Z"
   },
   {
     teams: ["KR", "DE"],
     goals: [2, 0],
-    fairPlay: [4, 0]
+    fairPlay: [4, 0],
+    date: "2018-06-27T14:00:00Z"
   },
   {
     teams: ["MX", "SE"],
     goals: [0, 3],
-    fairPlay: [3, 2]
+    fairPlay: [3, 2],
+    date: "2018-06-27T14:00:00Z"
   }
 ];
 
@@ -300,32 +250,38 @@ const groupGMatches = [
   {
     teams: ["BE", "PA"],
     goals: [3, 0],
-    fairPlay: [3, 5]
+    fairPlay: [3, 5],
+    date: "2018-06-18T15:00:00Z"
   },
   {
     teams: ["TN", "GB-ENG"],
     goals: [1, 2],
-    fairPlay: [0, 1]
+    fairPlay: [0, 1],
+    date: "2018-06-18T18:00:00Z"
   },
   {
     teams: ["BE", "TN"],
     goals: [5, 2],
-    fairPlay: [0, 1]
+    fairPlay: [0, 1],
+    date: "2018-06-23T12:00:00Z"
   },
   {
     teams: ["GB-ENG", "PA"],
     goals: [6, 1],
-    fairPlay: [1, 3]
+    fairPlay: [1, 3],
+    date: "2018-06-24T12:00:00Z"
   },
   {
     teams: ["GB-ENG", "BE"],
     goals: [0, 1],
-    fairPlay: [0, 2]
+    fairPlay: [0, 2],
+    date: "2018-06-28T18:00:00Z"
   },
   {
     teams: ["PA", "TN"],
     goals: [1, 2],
-    fairPlay: [3, 3]
+    fairPlay: [3, 3],
+    date: "2018-06-28T18:00:00Z"
   }
 ];
 
@@ -335,32 +291,38 @@ const groupHMatches = [
   {
     teams: ["CO", "JP"],
     goals: [1, 2],
-    fairPlay: [5, 1]
+    fairPlay: [5, 1],
+    date: "2018-06-19T12:00:00Z"
   },
   {
     teams: ["PL", "SN"],
     goals: [1, 2],
-    fairPlay: [1, 2]
+    fairPlay: [1, 2],
+    date: "2018-06-19T15:00:00Z"
   },
   {
     teams: ["JP", "SN"],
     goals: [2, 2],
-    fairPlay: [2, 3]
+    fairPlay: [2, 3],
+    date: "2018-06-24T15:00:00Z"
   },
   {
     teams: ["PL", "CO"],
     goals: [0, 3],
-    fairPlay: [2, 0]
+    fairPlay: [2, 0],
+    date: "2018-06-24T18:00:00Z"
   },
   {
     teams: ["JP", "PL"],
     goals: [0, 1],
-    fairPlay: [1, 0]
+    fairPlay: [1, 0],
+    date: "2018-06-28T14:00:00Z"
   },
   {
     teams: ["SN", "CO"],
     goals: [0, 1],
-    fairPlay: [1, 1]
+    fairPlay: [1, 1],
+    date: "2018-06-28T14:00:00Z"
   }
 ];
 
