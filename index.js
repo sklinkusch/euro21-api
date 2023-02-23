@@ -4,6 +4,7 @@ const port = 3500;
 
 const WM2022 = require("./data/worldcup_m_2022");
 const WM2018 = require("./data/worldcup_m_2018");
+const WM2014 = require("./data/worldcup_m_2014");
 
 const useCors = (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -26,6 +27,8 @@ function getWorldCupData(req, res) {
       return res.status(200).json(WM2022(lang));
     case "2018":
       return res.status(200).json(WM2018(lang));
+    case "2014":
+      return res.status(200).json(WM2014(lang));
     default:
       return res
         .status(500)
