@@ -1,4 +1,4 @@
-const { getKoTeam, getLoser, localeName, makeTable } = require("./helpers");
+const { getKoTeam, getLoser, localeName, makeTable } = require("../helpers");
 
 const groupAMatches = [
   {
