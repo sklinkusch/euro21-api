@@ -114,6 +114,11 @@ exports.makeTable = (matches, name) => {
   return sortedTable;
 };
 
+exports.makeEasyTable = (teams) => {
+  const sortedTeams = sortFunction(teams, "wc");
+  return sortedTeams;
+};
+
 const sortFunction = (teamData, mode) => {
   const points = Array.from(new Set(teamData.map((team) => team.points))).sort(
     (a, b) => b - a
