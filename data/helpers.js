@@ -106,7 +106,6 @@ exports.makeTable = (matches, name) => {
       goalDifference,
       fairPlay,
       ownMatches,
-      matches,
       victories,
       group: name
     };
