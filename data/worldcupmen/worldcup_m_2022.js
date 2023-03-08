@@ -419,6 +419,7 @@ const champion = getKoTeam(teamsF, goalsF);
 
 const matchData = (lang) => {
   return {
+    host: ["QA"],
     groups: {
       A: {
         matches: groupAMatches,

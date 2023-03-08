@@ -404,6 +404,7 @@ const champion = getKoTeam(teamsF, goalsF);
 
 const matchData = (lang) => {
   return {
+    host: ["ZA"],
     groups: {
       A: {
         matches: groupAMatches,
