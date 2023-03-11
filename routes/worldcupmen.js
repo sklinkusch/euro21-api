@@ -6,6 +6,7 @@ const WM2006 = require("../data/worldcupmen/worldcup_m_2006");
 const WM2002 = require("../data/worldcupmen/worldcup_m_2002");
 const WM1998 = require("../data/worldcupmen/worldcup_m_1998");
 const WM1994 = require("../data/worldcupmen/worldcup_m_1994");
+const WM1990 = require("../data/worldcupmen/worldcup_m_1990");
 
 function getWorldCupMenData(req, res) {
   const { year, lang } = req.query;
@@ -26,6 +27,8 @@ function getWorldCupMenData(req, res) {
       return res.status(200).json(WM1998(lang));
     case "1994":
       return res.status(200).json(WM1994(lang));
+    case "1990":
+      return res.status(200).json(WM1990(lang));
     default:
       return res
         .status(500)
