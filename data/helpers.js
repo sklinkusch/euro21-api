@@ -1,29 +1,41 @@
 const locales = require("./locales.json");
 
 exports.getKoTeam = (teams, goals) => {
+  const teamAType = typeof teams[0];
+  const teamBType = typeof teams[1];
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
       return teams[0];
     } else if (goals[1] > goals[0]) {
       return teams[1];
     } else {
-      return [...teams[0], ...teams[1]];
+      return teamAType === "string" && teamBType === "string"
+        ? [teams[0], teams[1]]
+        : [...teams[0], ...teams[1]];
     }
   }
-  return [...teams[0], ...teams[1]];
+  return teamAType === "string" && teamBType === "string"
+    ? [teams[0], teams[1]]
+    : [...teams[0], ...teams[1]];
 };
 
 exports.getLoser = (teams, goals) => {
+  const teamAType = typeof teams[0];
+  const teamBType = typeof teams[1];
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
       return teams[1];
     } else if (goals[1] > goals[0]) {
       return teams[0];
     } else {
-      return [...teams[0], ...teams[1]];
+      return teamAType === "string" && teamBType === "string"
+        ? [teams[0], teams[1]]
+        : [...teams[0], ...teams[1]];
     }
   }
-  return [...teams[0], ...teams[1]];
+  return teamAType === "string" && teamBType === "string"
+    ? [teams[0], teams[1]]
+    : [...teams[0], ...teams[1]];
 };
 
 exports.localeName = (code, lang) => {
