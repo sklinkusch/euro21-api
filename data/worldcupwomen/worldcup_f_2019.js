@@ -5,19 +5,6 @@ const {
   getKoTeam,
   getLoser
 } = require("../helpers");
-/*
-export const match3p = {
-  goals: [1, 2],
-  add: null,
-}
-
-export const matchf = {
-  goals: [2, 0],
-  add: null,
-}
-
-export default matches
-*/
 
 const groupAMatches = [
   {
