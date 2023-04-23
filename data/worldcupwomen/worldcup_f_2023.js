@@ -1,7 +1,6 @@
 const {
-  localeName,
+  // localeName,
   makeTable,
-  makeEasyTable,
   getKoTeam,
   getLoser
 } = require("../helpers");
@@ -350,56 +349,56 @@ const second = mergedGroupTables.map((group) => group[1].team);
 
 const teamsAF1 = [first[0], second[2]];
 const goalsAF1 = [null, null];
-const addAF1 = (lang) => null;
+const addAF1 = () => null;
 const teamsAF2 = [first[2], second[0]];
 const goalsAF2 = [null, null];
-const addAF2 = (lang) => null;
+const addAF2 = () => null;
 const teamsAF3 = [first[4], second[6]];
 const goalsAF3 = [null, null];
-const addAF3 = (lang) => null;
+const addAF3 = () => null;
 const teamsAF4 = [first[6], second[4]];
 const goalsAF4 = [null, null];
-const addAF4 = (lang) => null;
+const addAF4 = () => null;
 const teamsAF5 = [first[3], second[1]];
 const goalsAF5 = [null, null];
-const addAF5 = (lang) => null;
+const addAF5 = () => null;
 const teamsAF6 = [first[1], second[3]];
 const goalsAF6 = [null, null];
-const addAF6 = (lang) => null;
+const addAF6 = () => null;
 const teamsAF7 = [first[7], second[5]];
 const goalsAF7 = [null, null];
-const addAF7 = (lang) => null;
+const addAF7 = () => null;
 const teamsAF8 = [first[5], second[7]];
 const goalsAF8 = [null, null];
-const addAF8 = (lang) => null;
+const addAF8 = () => null;
 
 const teamsVF1 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF3, goalsAF3)];
 const goalsVF1 = [null, null];
-const addVF1 = (lang) => null;
+const addVF1 = () => null;
 const teamsVF2 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)];
 const goalsVF2 = [null, null];
-const addVF2 = (lang) => null;
+const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF7, goalsAF7)];
 const goalsVF3 = [null, null];
-const addVF3 = (lang) => null;
+const addVF3 = () => null;
 const teamsVF4 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF8, goalsAF8)];
 const goalsVF4 = [null, null];
-const addVF4 = (lang) => null;
+const addVF4 = () => null;
 
 const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
 const goalsHF1 = [null, null];
-const addHF1 = (lang) => null;
+const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)];
 const goalsHF2 = [null, null];
-const addHF2 = (lang) => null;
+const addHF2 = () => null;
 
 const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
 const goals3P = [null, null];
-const add3P = (lang) => null;
+const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
 const goalsF = [null, null];
-const addF = (lang) => null;
+const addF = () => null;
 
 const champion = getKoTeam(teamsF, goalsF);
 

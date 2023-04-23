@@ -421,10 +421,10 @@ const second = mergedGroupTables.map((group) => group[1].team);
 
 const teamsAF1 = [first[4], second[1]];
 const goalsAF1 = [1, 0];
-const addAF1 = (lang) => null;
+const addAF1 = () => null;
 const teamsAF2 = [first[0], second[5]];
 const goalsAF2 = [0, 3];
-const addAF2 = (lang) => null;
+const addAF2 = () => null;
 const teamsAF3 = [first[5], second[0]];
 const goalsAF3 = [1, 2];
 const addAF3 = (lang) => `(1:1) ${localeName("GoldenGoal", lang)}`;
@@ -434,23 +434,23 @@ const addAF4 = (lang) =>
   `${localeName("Penalties", lang)}, 1:1 ${localeName("ExtraTime", lang)}`;
 const teamsAF5 = [first[6], second[3]];
 const goalsAF5 = [0, 2];
-const addAF5 = (lang) => null;
+const addAF5 = () => null;
 const teamsAF6 = [first[2], second[7]];
 const goalsAF6 = [2, 0];
-const addAF6 = (lang) => null;
+const addAF6 = () => null;
 const teamsAF7 = [first[7], second[2]];
 const goalsAF7 = [0, 1];
-const addAF7 = (lang) => null;
+const addAF7 = () => null;
 const teamsAF8 = [first[3], second[6]];
 const goalsAF8 = [2, 1];
 const addAF8 = (lang) => `(1:1) ${localeName("GoldenGoal", lang)}`;
 
 const teamsVF1 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF6, goalsAF6)];
 const goalsVF1 = [1, 2];
-const addVF1 = (lang) => null;
+const addVF1 = () => null;
 const teamsVF2 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF5, goalsAF5)];
 const goalsVF2 = [1, 0];
-const addVF2 = (lang) => null;
+const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF8, goalsAF8)];
 const goalsVF3 = [3, 5];
 const addVF3 = (lang) =>
@@ -461,18 +461,18 @@ const addVF4 = (lang) => `(0:0) ${localeName("GoldenGoal", lang)}`;
 
 const teamsHF1 = [getKoTeam(teamsVF2, goalsVF2), getKoTeam(teamsVF3, goalsVF3)];
 const goalsHF1 = [1, 0];
-const addHF1 = (lang) => null;
+const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF4, goalsVF4)];
 const goalsHF2 = [1, 0];
-const addHF2 = (lang) => null;
+const addHF2 = () => null;
 
 const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
 const goals3P = [2, 3];
-const add3P = (lang) => null;
+const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
 const goalsF = [0, 2];
-const addF = (lang) => null;
+const addF = () => null;
 
 const champion = getKoTeam(teamsF, goalsF);
 

@@ -11,6 +11,12 @@ const useCors = (req, res, next) => {
   next();
 };
 
+const wrongEndpoint = (req, res) => {
+  return res
+    .status(404)
+    .json({ error: { message: "This endpoint does not exist." } });
+};
+
 app.use((req, res, next) => useCors(req, res, next));
 
 app.get("/worldcupmen", (req, res) => getWorldCupMenData(req, res));

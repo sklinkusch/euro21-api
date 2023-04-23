@@ -193,6 +193,117 @@ exports.makeTable2 = (matches, name) => {
   return sortedTable;
 };
 
+const sortTeamsTwo = (sortedTeamsRaw, teamSort) => {
+  let sorted = [];
+  const [teamA, teamB] = teamSort;
+  const teamNames = sortedTeamsRaw.map((team) => team.team);
+  const teamAIndex = teamNames.indexOf(teamA);
+  const teamBIndex = teamNames.indexOf(teamB);
+  const teamADataset = sortedTeamsRaw.find((team) => team.team === teamA);
+  const teamBDataset = sortedTeamsRaw.find((team) => team.team === teamB);
+  const diff = Math.abs(teamAIndex - teamBIndex);
+  const minimalIndex = Math.min(teamAIndex, teamBIndex);
+  const maximalIndex = Math.max(teamAIndex, teamBIndex);
+  if (diff === 1) {
+    for (let i = 0; i < minimalIndex; i++) {
+      sorted[i] = sortedTeamsRaw[i];
+    }
+    sorted[minimalIndex] = teamADataset;
+    sorted[maximalIndex] = teamBDataset;
+    for (let j = maximalIndex + 1; j < sortedTeamsRaw.length; j++) {
+      sorted[j] = sortedTeamsRaw[j];
+    }
+  } else {
+    sorted = sortedTeamsRaw;
+  }
+  return sorted;
+};
+
+const sortTeamsThree = (sortedTeamsRaw, teamSort) => {
+  let sorted = [];
+  const [team1, team2, team3] = teamSort;
+  const teamnames = sortedTeamsRaw.map((team) => team.team);
+  const team1Index = teamnames.indexOf(team1);
+  const team2Index = teamnames.indexOf(team2);
+  const team3Index = teamnames.indexOf(team3);
+  const team1Dataset = sortedTeamsRaw.find((team) => team.team === team1);
+  const team2Dataset = sortedTeamsRaw.find((team) => team.team === team2);
+  const team3Dataset = sortedTeamsRaw.find((team) => team.team === team3);
+  const minIndex = Math.min(team1Index, team2Index, team3Index);
+  const maxIndex = Math.max(team1Index, team2Index, team3Index);
+  const intermediateIndex = [team1Index, team2Index, team3Index].find(
+    (index) => index !== minIndex && index !== maxIndex
+  );
+  const diffMinInt = Math.abs(intermediateIndex - minIndex);
+  const diffIntMax = Math.abs(maxIndex - intermediateIndex);
+  const identifierMin =
+    team1Index === minIndex ? "A" : team2Index === minIndex ? "B" : "C";
+  const identifierInt =
+    team1Index === intermediateIndex
+      ? "A"
+      : team2Index === intermediateIndex
+      ? "B"
+      : "C";
+  const identifierMax =
+    team1Index === maxIndex
+      ? "A"
+      : team2Index === intermediateIndex
+      ? "B"
+      : "C";
+  if (diffMinInt === 1 && diffIntMax === 1) {
+    for (let i = 0; i < minIndex; i++) {
+      sorted[i] = sortedTeamsRaw[i];
+    }
+    sorted[minIndex] = team1Dataset;
+    sorted[intermediateIndex] = team2Dataset;
+    sorted[maxIndex] = team3Dataset;
+    for (let j = minIndex + 1; j < sortedTeamsRaw.length; j++) {
+      sorted[j] = sortedTeamsRaw[j];
+    }
+  } else if (diffMinInt === 1) {
+    for (let i = 0; i < minIndex; i++) {
+      sorted[i] = sortedTeamsRaw[i];
+    }
+    sorted[minIndex] =
+      identifierMin === "A"
+        ? team1Dataset
+        : identifierMin === "B"
+        ? team2Dataset
+        : team3Dataset;
+    sorted[intermediateIndex] =
+      identifierInt === "A"
+        ? team1Dataset
+        : identifierInt === "B"
+        ? team2Dataset
+        : team3Dataset;
+    for (let j = intermediateIndex + 1; j < sortedTeamsRaw.length; j++) {
+      sorted[j] = sortedTeamsRaw[j];
+    }
+  } else if (diffIntMax === 1) {
+    for (let i = 0; i < intermediateIndex; i++) {
+      sorted[i] = sortedTeamsRaw[i];
+    }
+    sorted[intermediateIndex] =
+      identifierInt === "A"
+        ? team1Dataset
+        : identifierInt === "B"
+        ? team2Dataset
+        : team3Dataset;
+    sorted[maxIndex] =
+      identifierMax === "A"
+        ? team1Dataset
+        : identifierMax === "B"
+        ? team2Dataset
+        : team3Dataset;
+    for (let j = maxIndex + 1; j < sortedTeamsRaw.length; j++) {
+      sorted[j] = sortedTeamsRaw[j];
+    }
+  } else {
+    sorted = sortedTeamsRaw;
+  }
+  return sorted;
+};
+
 exports.makeEasyTable = (teams, mode = "wc", teamSort) => {
   const sortedTeamsRaw = sortFunction(teams, mode);
   let sorted = [];
@@ -203,116 +314,14 @@ exports.makeEasyTable = (teams, mode = "wc", teamSort) => {
         sorted = sortedTeamsRaw;
         break;
       case 2:
-        const [teamA, teamB] = teamSort;
-        const teamNames = sortedTeamsRaw.map((team) => team.team);
-        const teamAIndex = teamNames.indexOf(teamA);
-        const teamBIndex = teamNames.indexOf(teamB);
-        const teamADataset = sortedTeamsRaw.find((team) => team.team === teamA);
-        const teamBDataset = sortedTeamsRaw.find((team) => team.team === teamB);
-        const diff = Math.abs(teamAIndex - teamBIndex);
-        const minimalIndex = Math.min(teamAIndex, teamBIndex);
-        const maximalIndex = Math.max(teamAIndex, teamBIndex);
-        if (diff === 1) {
-          for (let i = 0; i < minimalIndex; i++) {
-            sorted[i] = sortedTeamsRaw[i];
-          }
-          sorted[minimalIndex] = teamADataset;
-          sorted[maximalIndex] = teamBDataset;
-          for (let j = maximalIndex + 1; j < sortedTeamsRaw.length; j++) {
-            sorted[j] = sortedTeamsRaw[j];
-          }
-        } else {
-          sorted = sortedTeamsRaw;
-        }
+        sorted = sortTeamsTwo(sortedTeamsRaw, teamSort);
         break;
       case 3:
-        const [team1, team2, team3] = teamSort;
-        const teamnames = sortedTeamsRaw.map((team) => team.team);
-        const team1Index = teamnames.indexOf(team1);
-        const team2Index = teamnames.indexOf(team2);
-        const team3Index = teamnames.indexOf(team3);
-        const team1Dataset = sortedTeamsRaw.find((team) => team.team === team1);
-        const team2Dataset = sortedTeamsRaw.find((team) => team.team === team2);
-        const team3Dataset = sortedTeamsRaw.find((team) => team.team === team3);
-        const minIndex = Math.min(team1Index, team2Index, team3Index);
-        const maxIndex = Math.max(team1Index, team2Index, team3Index);
-        const intermediateIndex = [team1Index, team2Index, team3Index].find(
-          (index) => index !== minimalIndex && index !== maximalIndex
-        );
-        const diffMinInt = Math.abs(intermediateIndex - minimalIndex);
-        const diffIntMax = Math.abs(maximalIndex - intermediateIndex);
-        const identifierMin =
-          team1Index === minimalIndex
-            ? "A"
-            : team2Index === minimalIndex
-            ? "B"
-            : "C";
-        const identifierInt =
-          team1Index === intermediateIndex
-            ? "A"
-            : team2Index === intermediateIndex
-            ? "B"
-            : "C";
-        const identifierMax =
-          team1Index === maximalIndex
-            ? "A"
-            : team2Index === intermediateIndex
-            ? "B"
-            : "C";
-        if (diffMinInt === 1 && diffIntMax === 1) {
-          for (let i = 0; i < minimalIndex; i++) {
-            sorted[i] = sortedTeamsRaw[i];
-          }
-          sorted[minimalIndex] = team1Dataset;
-          sorted[intermediateIndex] = team2Dataset;
-          sorted[maximalIndex] = team3Dataset;
-          for (let j = minimalIndex + 1; j < sortedTeamsRaw.length; j++) {
-            sorted[j] = sortedTeamsRaw[j];
-          }
-        } else if (diffMinInt === 1) {
-          for (let i = 0; i < minimalIndex; i++) {
-            sorted[i] = sortedTeamsRaw[i];
-          }
-          sorted[minimalIndex] =
-            identifierMin === "A"
-              ? team1Dataset
-              : identifierMin === "B"
-              ? team2Dataset
-              : team3Dataset;
-          sorted[intermediateIndex] =
-            identifierInt === "A"
-              ? team1Dataset
-              : identifierInt === "B"
-              ? team2Dataset
-              : team3Dataset;
-          for (let j = intermediateIndex + 1; j < sortedTeamsRaw.length; j++) {
-            sorted[j] = sortedTeamsRaw[j];
-          }
-        } else if (diffIntMax === 1) {
-          for (let i = 0; i < intermediateIndex; i++) {
-            sorted[i] = sortedTeamsRaw[i];
-          }
-          sorted[intermediateIndex] =
-            identifierInt === "A"
-              ? team1Dataset
-              : identifierInt === "B"
-              ? team2Dataset
-              : team3Dataset;
-          sorted[maximalIndex] =
-            identifierMax === "A"
-              ? team1Dataset
-              : identifierMax === "B"
-              ? team2Dataset
-              : team3Dataset;
-          for (let j = maximalIndex + 1; j < sortedTeamsRaw.length; j++) {
-            sorted[j] = sortedTeamsRaw[j];
-          }
-        } else {
-          sorted = sortedTeamsRaw;
-        }
+        sorted = sortTeamsThree(sortedTeamsRaw, teamSort);
         break;
       case 4:
         sorted = sortedTeamsRaw;
+        break;
       default:
         sorted = sortedTeamsRaw;
     }
@@ -350,7 +359,7 @@ const sortFunction = (teamData, mode) => {
       if (ind > -1 && ind < arr.length) arr[ind].push(curr);
       return arr;
     },
-    new Array(points.length).fill(1).map((i) => [])
+    new Array(points.length).fill(1).map(() => [])
   );
   if (mode === "wc") {
     let teamsAfterOverallGoalDifference = [];
@@ -482,7 +491,80 @@ const sortFunction = (teamData, mode) => {
         teamsAfterDirectComparisonB.push(...sortedTeams);
       }
     });
-    return teamsAfterDirectComparisonB;
+    let teamsAfterDirectComparisonC = [];
+    teamsAfterDirectComparisonB.forEach((team, index, array) => {
+      if (index === 0) {
+        teamsAfterDirectComparisonC.push({ ...team, rank: 1 });
+      } else {
+        const {
+          team: currTeam,
+          points: currPoints,
+          goalDifference: currDiff,
+          goals: currGoals,
+          ownMatches: currOwnMatches
+        } = team;
+        const {
+          team: prevTeam,
+          points: prevPoints,
+          goalDifference: prevDiff,
+          goals: prevGoals
+        } = array[index - 1];
+        if (
+          currPoints === prevPoints &&
+          currDiff === prevDiff &&
+          currGoals === prevGoals
+        ) {
+          const matchesAgainstPrevTeam = currOwnMatches.filter((match) =>
+            match.teams.includes(prevTeam)
+          );
+          const ownPoints = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(currTeam);
+            const otherIndex = matchIndex === 0 ? 1 : 0;
+            const tGoals = match.goals[matchIndex];
+            const cGoals = match.goals[otherIndex];
+            if (tGoals > cGoals) return acc + 3;
+            if (tGoals === cGoals) return acc + 1;
+            return acc;
+          }, 0);
+          const otherPoints = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(prevTeam);
+            const otherIndex = matchIndex === 0 ? 1 : 0;
+            const tGoals = match.goals[matchIndex];
+            const cGoals = match.goals[otherIndex];
+            if (tGoals > cGoals) return acc + 3;
+            if (tGoals === cGoals) return acc + 1;
+            return acc;
+          }, 0);
+          const ownGoals = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(currTeam);
+            return acc + match.goals[matchIndex];
+          }, 0);
+          const otherGoals = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(prevTeam);
+            return acc + match.goals[matchIndex];
+          }, 0);
+          const ownDiff = ownGoals - otherGoals;
+          const otherDiff = otherGoals - ownGoals;
+          if (otherPoints > ownPoints) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else if (otherDiff > ownDiff) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else if (otherGoals > ownGoals) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else {
+            teamsAfterDirectComparisonC.push({
+              ...team,
+              rank: teamsAfterDirectComparisonC[
+                teamsAfterDirectComparisonC.length - 1
+              ].rank
+            });
+          }
+        } else {
+          teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+        }
+      }
+    });
+    return teamsAfterDirectComparisonC;
   } else {
     let teamsAfterDirectComparisonA = teamsPoints.slice();
     let teamsAfterDirectComparisonB = [];
@@ -577,6 +659,79 @@ const sortFunction = (teamData, mode) => {
         teamsAfterDirectComparisonB.push(...sortedTeams);
       }
     });
-    return teamsAfterDirectComparisonB;
+    let teamsAfterDirectComparisonC = [];
+    teamsAfterDirectComparisonB.forEach((team, index, array) => {
+      if (index === 0) {
+        teamsAfterDirectComparisonC.push({ ...team, rank: 1 });
+      } else {
+        const {
+          team: currTeam,
+          points: currPoints,
+          goalDifference: currDiff,
+          goals: currGoals,
+          ownMatches: currOwnMatches
+        } = team;
+        const {
+          team: prevTeam,
+          points: prevPoints,
+          goalDifference: prevDiff,
+          goals: prevGoals
+        } = array[index - 1];
+        if (
+          currPoints === prevPoints &&
+          currDiff === prevDiff &&
+          currGoals === prevGoals
+        ) {
+          const matchesAgainstPrevTeam = currOwnMatches.filter((match) =>
+            match.teams.includes(prevTeam)
+          );
+          const ownPoints = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(currTeam);
+            const otherIndex = matchIndex === 0 ? 1 : 0;
+            const tGoals = match.goals[matchIndex];
+            const cGoals = match.goals[otherIndex];
+            if (tGoals > cGoals) return acc + 3;
+            if (tGoals === cGoals) return acc + 1;
+            return acc;
+          }, 0);
+          const otherPoints = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(prevTeam);
+            const otherIndex = matchIndex === 0 ? 1 : 0;
+            const tGoals = match.goals[matchIndex];
+            const cGoals = match.goals[otherIndex];
+            if (tGoals > cGoals) return acc + 3;
+            if (tGoals === cGoals) return acc + 1;
+            return acc;
+          }, 0);
+          const ownGoals = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(currTeam);
+            return acc + match.goals[matchIndex];
+          }, 0);
+          const otherGoals = matchesAgainstPrevTeam.reduce((acc, match) => {
+            const matchIndex = match.teams.indexOf(prevTeam);
+            return acc + match.goals[matchIndex];
+          }, 0);
+          const ownDiff = ownGoals - otherGoals;
+          const otherDiff = otherGoals - ownGoals;
+          if (otherPoints > ownPoints) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else if (otherDiff > ownDiff) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else if (otherGoals > ownGoals) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else {
+            teamsAfterDirectComparisonC.push({
+              ...team,
+              rank: teamsAfterDirectComparisonC[
+                teamsAfterDirectComparisonC.length - 1
+              ].rank
+            });
+          }
+        } else {
+          teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+        }
+      }
+    });
+    return teamsAfterDirectComparisonC;
   }
 };

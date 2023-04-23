@@ -314,20 +314,20 @@ const goalsAF1 = [2, 1];
 const addAF1 = (lang) => `(0:0) ${localeName("Penalties", lang)}`;
 const teamsAF2 = [second[0], second[2]];
 const goalsAF2 = [4, 1];
-const addAF2 = (lang) => null;
+const addAF2 = () => null;
 const teamsAF3 = [first[2], wTeams[assoc.indexOf(5)]];
 const goalsAF3 = [0, 1];
-const addAF3 = (lang) => null;
+const addAF3 = () => null;
 const teamsAF4 = [first[3], wTeams[assoc.indexOf(3)]];
 const goalsAF4 = [2, 1];
-const addAF4 = (lang) => null;
+const addAF4 = () => null;
 const teamsAF5 = [second[5], second[1]];
 const goalsAF5 = [5, 4];
 const addAF5 = (lang) =>
   `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsAF6 = [first[0], wTeams[assoc.indexOf(2)]];
 const goalsAF6 = [2, 0];
-const addAF6 = (lang) => null;
+const addAF6 = () => null;
 const teamsAF7 = [first[4], second[3]];
 const goalsAF7 = [1, 2];
 const addAF7 = (lang) => `(1:1) ${localeName("Penalties", lang)}`;
@@ -341,10 +341,10 @@ const addVF1 = (lang) =>
   `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsVF2 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF6, goalsAF6)];
 const goalsVF2 = [0, 1];
-const addVF2 = (lang) => null;
+const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)];
 const goalsVF3 = [0, 1];
-const addVF3 = (lang) => null;
+const addVF3 = () => null;
 const teamsVF4 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF8, goalsAF8)];
 const goalsVF4 = [2, 3];
 const addVF4 = (lang) => `(2:2) ${localeName("ExtraTime", lang)}`;
@@ -366,11 +366,11 @@ const addHF2 = (lang) =>
 
 const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
 const goals3P = [2, 1];
-const add3P = (lang) => null;
+const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
 const goalsF = [0, 1];
-const addF = (lang) => null;
+const addF = () => null;
 
 const champion = getKoTeam(teamsF, goalsF);
 
