@@ -344,8 +344,29 @@ const mergedGroupTables = [
   groupHTable
 ];
 
-const first = mergedGroupTables.map((group) => group[0].team);
-const second = mergedGroupTables.map((group) => group[1].team);
+const first = mergedGroupTables.map((group) => {
+  const firstTeams = group.filter((team) => team.rank === 1);
+  if (firstTeams.length === 0) {
+    return group[0].team;
+  }
+  if (firstTeams.length === 1) {
+    return firstTeams[0].team;
+  }
+  return firstTeams.map((team) => team.team);
+});
+
+const second = mergedGroupTables.map((group) => {
+  const secondTeams = group.filter((team) => team.rank === 2);
+  const firstTeams = group.filter((team) => team.rank === 1);
+  const teams =
+    secondTeams.length === 0 && firstTeams.length > 0
+      ? firstTeams
+      : secondTeams;
+  if (teams.length === 1) {
+    return teams[0].team;
+  }
+  return teams.map((team) => team.team);
+});
 
 const teamsAF1 = [first[0], second[2]];
 const goalsAF1 = [null, null];
