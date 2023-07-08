@@ -11,12 +11,12 @@ exports.getKoTeam = (teams, goals) => {
     } else {
       return teamAType === "string" && teamBType === "string"
         ? [teams[0], teams[1]]
-        : [...teams[0], ...teams[1]];
+        : Array.from(new Set([...teams[0], ...teams[1]]));
     }
   }
   return teamAType === "string" && teamBType === "string"
     ? [teams[0], teams[1]]
-    : [...teams[0], ...teams[1]];
+    : Array.from(new Set([...teams[0], ...teams[1]]));
 };
 
 exports.getLoser = (teams, goals) => {
@@ -30,12 +30,12 @@ exports.getLoser = (teams, goals) => {
     } else {
       return teamAType === "string" && teamBType === "string"
         ? [teams[0], teams[1]]
-        : [...teams[0], ...teams[1]];
+        : Array.from(new Set([...teams[0], ...teams[1]]));
     }
   }
   return teamAType === "string" && teamBType === "string"
     ? [teams[0], teams[1]]
-    : [...teams[0], ...teams[1]];
+    : Array.from(new Set([...teams[0], ...teams[1]]));
 };
 
 exports.localeName = (code, lang) => {
