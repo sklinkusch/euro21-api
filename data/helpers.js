@@ -9,14 +9,26 @@ exports.getKoTeam = (teams, goals) => {
     } else if (goals[1] > goals[0]) {
       return teams[1];
     } else {
-      return teamAType === "string" && teamBType === "string"
-        ? [teams[0], teams[1]]
-        : Array.from(new Set([...teams[0], ...teams[1]]));
+      if (teamAType === "string" && teamBType === "string") {
+        return [teams[0], teams[1]];
+      } else if (teamAType === "string" && teamBType !== "string") {
+        return [teams[0], ...teams[1]];
+      } else if (teamAType !== "string" && teamBType === "string") {
+        return [...teams[0], teams[1]];
+      } else {
+        return Array.from(new Set([...teams[0], ...teams[1]]));
+      }
     }
   }
-  return teamAType === "string" && teamBType === "string"
-    ? [teams[0], teams[1]]
-    : Array.from(new Set([...teams[0], ...teams[1]]));
+  if (teamAType === "string" && teamBType === "string") {
+    return [teams[0], teams[1]];
+  } else if (teamAType === "string" && teamBType !== "string") {
+    return [teams[0], ...teams[1]];
+  } else if (teamAType !== "string" && teamBType === "string") {
+    return [...teams[0], teams[1]];
+  } else {
+    return Array.from(new Set([...teams[0], ...teams[1]]));
+  }
 };
 
 exports.getLoser = (teams, goals) => {
@@ -28,14 +40,26 @@ exports.getLoser = (teams, goals) => {
     } else if (goals[1] > goals[0]) {
       return teams[0];
     } else {
-      return teamAType === "string" && teamBType === "string"
-        ? [teams[0], teams[1]]
-        : Array.from(new Set([...teams[0], ...teams[1]]));
+      if (teamAType === "string" && teamBType === "string") {
+        return [teams[0], teams[1]];
+      } else if (teamAType === "string" && teamBType !== "string") {
+        return [teams[0], ...teams[1]];
+      } else if (teamAType !== "string" && teamBType === "string") {
+        return [...teams[0], teams[1]];
+      } else {
+        return Array.from(new Set([...teams[0], ...teams[1]]));
+      }
     }
   }
-  return teamAType === "string" && teamBType === "string"
-    ? [teams[0], teams[1]]
-    : Array.from(new Set([...teams[0], ...teams[1]]));
+  if (teamAType === "string" && teamBType === "string") {
+    return [teams[0], teams[1]];
+  } else if (teamAType === "string" && teamBType !== "string") {
+    return [teams[0], ...teams[1]];
+  } else if (teamAType !== "string" && teamBType === "string") {
+    return [...teams[0], teams[1]];
+  } else {
+    return Array.from(new Set([...teams[0], ...teams[1]]));
+  }
 };
 
 exports.localeName = (code, lang) => {
