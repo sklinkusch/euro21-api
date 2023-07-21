@@ -55,8 +55,8 @@ const groupBMatches = [
   },
   {
     teams: ["NG", "CA"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [4, 2],
     date: "2023-07-21T02:30:00Z"
   },
   {
