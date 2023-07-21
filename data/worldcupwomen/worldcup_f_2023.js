@@ -14,8 +14,8 @@ const groupAMatches = [
   },
   {
     teams: ["PH", "CH"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 2],
+    fairPlay: [1, 2],
     date: "2023-07-21T05:00:00Z"
   },
   {
