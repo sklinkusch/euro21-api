@@ -10,37 +10,61 @@ const groupAMatches = [
     teams: ["NZ", "NO"],
     goals: [1, 0],
     fairPlay: [0, 1],
-    date: "2023-07-20T07:00:00Z"
+    date: "2023-07-20T07:00:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   },
   {
     teams: ["PH", "CH"],
     goals: [0, 2],
     fairPlay: [1, 2],
-    date: "2023-07-21T05:00:00Z"
+    date: "2023-07-21T05:00:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   },
   {
     teams: ["NZ", "PH"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-25T05:30:00Z"
+    date: "2023-07-25T05:30:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   },
   {
     teams: ["CH", "NO"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-25T08:00:00Z"
+    date: "2023-07-25T08:00:00Z",
+    place: {
+      city: "Hamilton",
+      country: "NZ"
+    }
   },
   {
     teams: ["NO", "PH"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-30T07:00:00Z"
+    date: "2023-07-30T07:00:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   },
   {
     teams: ["CH", "NZ"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-30T07:00:00Z"
+    date: "2023-07-30T07:00:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   }
 ];
 
@@ -51,37 +75,61 @@ const groupBMatches = [
     teams: ["AU", "IE"],
     goals: [1, 0],
     fairPlay: [0, 1],
-    date: "2023-07-20T10:00:00Z"
+    date: "2023-07-20T10:00:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
   },
   {
     teams: ["NG", "CA"],
     goals: [0, 0],
     fairPlay: [4, 2],
-    date: "2023-07-21T02:30:00Z"
+    date: "2023-07-21T02:30:00Z",
+    place: {
+      city: "Melbourne",
+      country: "AU"
+    }
   },
   {
     teams: ["CA", "IE"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-26T12:00:00Z"
+    date: "2023-07-26T12:00:00Z",
+    place: {
+      city: "Perth",
+      country: "AU"
+    }
   },
   {
     teams: ["AU", "NG"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-27T10:00:00Z"
+    date: "2023-07-27T10:00:00Z",
+    place: {
+      city: "Brisbane",
+      country: "AU"
+    }
   },
   {
     teams: ["IE", "NG"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-31T10:00:00Z"
+    date: "2023-07-31T10:00:00Z",
+    place: {
+      city: "Brisbane",
+      country: "AU"
+    }
   },
   {
     teams: ["CA", "AU"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-31T10:00:00Z"
+    date: "2023-07-31T10:00:00Z",
+    place: {
+      city: "Melbourne",
+      country: "AU"
+    }
   }
 ];
 
@@ -92,37 +140,61 @@ const groupCMatches = [
     teams: ["ES", "CR"],
     goals: [3, 0],
     fairPlay: [0, 0],
-    date: "2023-07-21T07:30:00Z"
+    date: "2023-07-21T07:30:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   },
   {
     teams: ["ZM", "JP"],
     goals: [0, 5],
     fairPlay: [3, 0],
-    date: "2023-07-22T07:00:00Z"
+    date: "2023-07-22T07:00:00Z",
+    place: {
+      city: "Hamilton",
+      country: "NZ"
+    }
   },
   {
     teams: ["JP", "CR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-26T05:00:00Z"
+    date: "2023-07-26T05:00:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   },
   {
     teams: ["ES", "ZM"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-26T07:30:00Z"
+    date: "2023-07-26T07:30:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   },
   {
     teams: ["CR", "ZM"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-31T07:00:00Z"
+    date: "2023-07-31T07:00:00Z",
+    place: {
+      city: "Hamilton",
+      country: "NZ"
+    }
   },
   {
     teams: ["JP", "ES"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-31T07:00:00Z"
+    date: "2023-07-31T07:00:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   }
 ];
 
@@ -133,37 +205,61 @@ const groupDMatches = [
     teams: ["GB-ENG", "HT"],
     goals: [1, 0],
     fairPlay: [2, 0],
-    date: "2023-07-22T09:30:00Z"
+    date: "2023-07-22T09:30:00Z",
+    place: {
+      city: "Brisbane",
+      country: "AU"
+    }
   },
   {
     teams: ["DK", "CN"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-22T12:00:00Z"
-  },
-  {
-    teams: ["CN", "HT"],
-    goals: [null, null],
-    fairPlay: [null, null],
-    date: "2023-07-28T08:30:00Z"
+    date: "2023-07-22T12:00:00Z",
+    place: {
+      city: "Perth",
+      country: "AU"
+    }
   },
   {
     teams: ["GB-ENG", "DK"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-28T11:00:00Z"
+    date: "2023-07-28T08:30:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
+  },
+  {
+    teams: ["CN", "HT"],
+    goals: [null, null],
+    fairPlay: [null, null],
+    date: "2023-07-28T11:00:00Z",
+    place: {
+      city: "Adelaide",
+      country: "AU"
+    }
   },
   {
     teams: ["HT", "DK"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-01T11:00:00Z"
+    date: "2023-08-01T11:00:00Z",
+    place: {
+      city: "Perth",
+      country: "AU"
+    }
   },
   {
     teams: ["CN", "GB-ENG"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-01T11:00:00Z"
+    date: "2023-08-01T11:00:00Z",
+    place: {
+      city: "Adelaide",
+      country: "AU"
+    }
   }
 ];
 
@@ -174,37 +270,61 @@ const groupEMatches = [
     teams: ["US", "VN"],
     goals: [3, 0],
     fairPlay: [1, 1],
-    date: "2023-07-22T01:00:00Z"
+    date: "2023-07-22T01:00:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   },
   {
     teams: ["NL", "PT"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-23T07:30:00Z"
-  },
-  {
-    teams: ["PT", "VN"],
-    goals: [null, null],
-    fairPlay: [null, null],
-    date: "2023-07-27T01:00:00Z"
+    date: "2023-07-23T07:30:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   },
   {
     teams: ["US", "NL"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-27T07:30:00Z"
+    date: "2023-07-27T01:00:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
+  },
+  {
+    teams: ["PT", "VN"],
+    goals: [null, null],
+    fairPlay: [null, null],
+    date: "2023-07-27T07:30:00Z",
+    place: {
+      city: "Hamilton",
+      country: "NZ"
+    }
   },
   {
     teams: ["VN", "NL"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-01T07:00:00Z"
+    date: "2023-08-01T07:00:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   },
   {
     teams: ["PT", "US"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-01T07:00:00Z"
+    date: "2023-08-01T07:00:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   }
 ];
 
@@ -215,37 +335,61 @@ const groupFMatches = [
     teams: ["FR", "JM"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-23T10:00:00Z"
+    date: "2023-07-23T10:00:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
   },
   {
     teams: ["BR", "PA"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-24T11:00:00Z"
-  },
-  {
-    teams: ["PA", "JM"],
-    goals: [null, null],
-    fairPlay: [null, null],
-    date: "2023-07-29T10:00:00Z"
+    date: "2023-07-24T11:00:00Z",
+    place: {
+      city: "Adelaide",
+      country: "AU"
+    }
   },
   {
     teams: ["FR", "BR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-29T12:30:00Z"
+    date: "2023-07-29T10:00:00Z",
+    place: {
+      city: "Brisbane",
+      country: "AU"
+    }
+  },
+  {
+    teams: ["PA", "JM"],
+    goals: [null, null],
+    fairPlay: [null, null],
+    date: "2023-07-29T12:30:00Z",
+    place: {
+      city: "Perth",
+      country: "AU"
+    }
   },
   {
     teams: ["JM", "BR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-02T10:00:00Z"
+    date: "2023-08-02T10:00:00Z",
+    place: {
+      city: "Melbourne",
+      country: "AU"
+    }
   },
   {
     teams: ["PA", "FR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-02T10:00:00Z"
+    date: "2023-08-02T10:00:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
   }
 ];
 
@@ -256,37 +400,61 @@ const groupGMatches = [
     teams: ["SE", "ZA"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-23T05:00:00Z"
+    date: "2023-07-23T05:00:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   },
   {
     teams: ["IT", "AR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-24T06:00:00Z"
+    date: "2023-07-24T06:00:00Z",
+    place: {
+      city: "Auckland",
+      country: "NZ"
+    }
   },
   {
     teams: ["AR", "ZA"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-28T00:00:00Z"
+    date: "2023-07-28T00:00:00Z",
+    place: {
+      city: "Dunedin",
+      country: "NZ"
+    }
   },
   {
     teams: ["SE", "IT"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-29T07:30:00Z"
+    date: "2023-07-29T07:30:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   },
   {
     teams: ["ZA", "IT"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-02T07:00:00Z"
+    date: "2023-08-02T07:00:00Z",
+    place: {
+      city: "Wellington",
+      country: "NZ"
+    }
   },
   {
     teams: ["AR", "SE"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-02T07:00:00Z"
+    date: "2023-08-02T07:00:00Z",
+    place: {
+      city: "Hamilton",
+      country: "NZ"
+    }
   }
 ];
 
@@ -297,37 +465,61 @@ const groupHMatches = [
     teams: ["DE", "MA"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-24T08:30:00Z"
+    date: "2023-07-24T08:30:00Z",
+    place: {
+      city: "Melbourne",
+      country: "AU"
+    }
   },
   {
     teams: ["CO", "KR"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-25T02:00:00Z"
+    date: "2023-07-25T02:00:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
   },
   {
     teams: ["KR", "MA"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-30T04:30:00Z"
+    date: "2023-07-30T04:30:00Z",
+    place: {
+      city: "Adelaide",
+      country: "AU"
+    }
   },
   {
     teams: ["DE", "CO"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-07-30T09:30:00Z"
+    date: "2023-07-30T09:30:00Z",
+    place: {
+      city: "Sydney",
+      country: "AU"
+    }
   },
   {
     teams: ["MA", "CO"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-03T10:00:00Z"
+    date: "2023-08-03T10:00:00Z",
+    place: {
+      city: "Perth",
+      country: "AU"
+    }
   },
   {
     teams: ["KR", "DE"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2023-08-03T10:00:00Z"
+    date: "2023-08-03T10:00:00Z",
+    place: {
+      city: "Brisbane",
+      country: "AU"
+    }
   }
 ];
 
@@ -465,49 +657,81 @@ const data = (lang) => {
         teams: teamsAF1,
         goals: goalsAF1,
         add: addAF1(lang),
-        date: "2023-08-05T05:00:00Z"
+        date: "2023-08-05T05:00:00Z",
+        place: {
+          city: "Auckland",
+          country: "NZ"
+        }
       },
       {
         teams: teamsAF2,
         goals: goalsAF2,
         add: addAF2(lang),
-        date: "2023-08-05T08:00:00Z"
+        date: "2023-08-05T08:00:00Z",
+        place: {
+          city: "Wellington",
+          country: "NZ"
+        }
       },
       {
         teams: teamsAF3,
         goals: goalsAF3,
         add: addAF3(lang),
-        date: "2023-08-06T02:00:00Z"
+        date: "2023-08-06T02:00:00Z",
+        place: {
+          city: "Sydney",
+          country: "AU"
+        }
       },
       {
         teams: teamsAF4,
         goals: goalsAF4,
         add: addAF4(lang),
-        date: "2023-08-06T09:00:00Z"
+        date: "2023-08-06T09:00:00Z",
+        place: {
+          city: "Melbourne",
+          country: "AU"
+        }
       },
       {
         teams: teamsAF5,
         goals: goalsAF5,
         add: addAF5(lang),
-        date: "2023-08-07T07:30:00Z"
+        date: "2023-08-07T07:30:00Z",
+        place: {
+          city: "Brisbane",
+          country: "AU"
+        }
       },
       {
         teams: teamsAF6,
         goals: goalsAF6,
         add: addAF6(lang),
-        date: "2023-08-07T10:30:00Z"
+        date: "2023-08-07T10:30:00Z",
+        place: {
+          city: "Sydney",
+          country: "AU"
+        }
       },
       {
         teams: teamsAF7,
         goals: goalsAF7,
         add: addAF7(lang),
-        date: "2023-08-08T08:00:00Z"
+        date: "2023-08-08T08:00:00Z",
+        place: {
+          city: "Melbourne",
+          country: "AU"
+        }
       },
       {
         teams: teamsAF8,
         goals: goalsAF8,
         add: addAF8(lang),
-        date: "2023-08-08T11:00:00Z"
+        date: "2023-08-08T11:00:00Z",
+        place: {
+          city: "Adelaide",
+          country: "AU"
+        }
       }
     ],
     VF: [
@@ -515,25 +739,41 @@ const data = (lang) => {
         teams: teamsVF1,
         goals: goalsVF1,
         add: addVF1(lang),
-        date: "2023-08-11T01:00:00Z"
+        date: "2023-08-11T01:00:00Z",
+        place: {
+          city: "Wellington",
+          country: "NZ"
+        }
       },
       {
         teams: teamsVF2,
         goals: goalsVF2,
         add: addVF2(lang),
-        date: "2023-08-11T07:30:00Z"
+        date: "2023-08-11T07:30:00Z",
+        place: {
+          city: "Auckland",
+          country: "NZ"
+        }
       },
       {
         teams: teamsVF3,
         goals: goalsVF3,
         add: addVF3(lang),
-        date: "2023-08-12T07:00:00Z"
+        date: "2023-08-12T07:00:00Z",
+        place: {
+          city: "Brisbane",
+          country: "AU"
+        }
       },
       {
         teams: teamsVF4,
         goals: goalsVF4,
         add: addVF4(lang),
-        date: "2023-08-12T10:30:00Z"
+        date: "2023-08-12T10:30:00Z",
+        place: {
+          city: "Sydney",
+          country: "AU"
+        }
       }
     ],
     HF: [
@@ -541,26 +781,42 @@ const data = (lang) => {
         teams: teamsHF1,
         goals: goalsHF1,
         add: addHF1(lang),
-        date: "2023-08-15T08:00:00Z"
+        date: "2023-08-15T08:00:00Z",
+        place: {
+          city: "Auckland",
+          country: "NZ"
+        }
       },
       {
         teams: teamsHF2,
         goals: goalsHF2,
         add: addHF2(lang),
-        date: "2023-08-16T10:00:00Z"
+        date: "2023-08-16T10:00:00Z",
+        place: {
+          city: "Sydney",
+          country: "AU"
+        }
       }
     ],
     "3P": {
       teams: teams3P,
       goals: goals3P,
       add: add3P(lang),
-      date: "2023-08-19T08:00:00Z"
+      date: "2023-08-19T08:00:00Z",
+      place: {
+        city: "Brisbane",
+        country: "AU"
+      }
     },
     F: {
       teams: teamsF,
       goals: goalsF,
       add: addF(lang),
-      date: "2023-08-20T10:00:00Z"
+      date: "2023-08-20T10:00:00Z",
+      place: {
+        city: "Sydney",
+        country: "AU"
+      }
     },
     champion: champion
   };
