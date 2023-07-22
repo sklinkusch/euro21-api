@@ -96,8 +96,8 @@ const groupCMatches = [
   },
   {
     teams: ["ZM", "JP"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 5],
+    fairPlay: [3, 0],
     date: "2023-07-22T07:00:00Z"
   },
   {
