@@ -172,8 +172,8 @@ const groupDTable = makeTable(groupDMatches);
 const groupEMatches = [
   {
     teams: ["US", "VN"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [3, 0],
+    fairPlay: [1, 1],
     date: "2023-07-22T01:00:00Z"
   },
   {
