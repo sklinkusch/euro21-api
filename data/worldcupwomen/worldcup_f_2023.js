@@ -278,8 +278,8 @@ const groupEMatches = [
   },
   {
     teams: ["NL", "PT"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 0],
+    fairPlay: [1, 2],
     date: "2023-07-23T07:30:00Z",
     place: {
       city: "Dunedin",
