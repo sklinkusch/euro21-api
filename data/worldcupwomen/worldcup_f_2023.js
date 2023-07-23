@@ -398,8 +398,8 @@ const groupFTable = makeTable(groupFMatches);
 const groupGMatches = [
   {
     teams: ["SE", "ZA"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 1],
+    fairPlay: [0, 2],
     date: "2023-07-23T05:00:00Z",
     place: {
       city: "Wellington",
