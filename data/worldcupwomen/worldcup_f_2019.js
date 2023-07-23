@@ -11,37 +11,61 @@ const groupAMatches = [
     teams: ["FR", "KR"],
     goals: [4, 0],
     fairPlay: [0, 0],
-    date: "2019-06-07T19:00:00Z"
+    date: "2019-06-07T19:00:00Z",
+    place: {
+      city: "Paris",
+      country: "FR"
+    }
   },
   {
     teams: ["NO", "NG"],
     goals: [3, 0],
     fairPlay: [0, 2],
-    date: "2019-06-08T19:00:00Z"
+    date: "2019-06-08T19:00:00Z",
+    place: {
+      city: "Reims",
+      country: "FR"
+    }
   },
   {
     teams: ["NG", "KR"],
     goals: [2, 0],
     fairPlay: [1, 2],
-    date: "2019-06-12T13:00:00Z"
+    date: "2019-06-12T13:00:00Z",
+    place: {
+      city: "Grenoble",
+      country: "FR"
+    }
   },
   {
     teams: ["FR", "NO"],
     goals: [2, 1],
     fairPlay: [1, 1],
-    date: "2019-06-12T19:00:00Z"
+    date: "2019-06-12T19:00:00Z",
+    place: {
+      city: "Nice",
+      country: "FR"
+    }
   },
   {
     teams: ["NG", "FR"],
     goals: [0, 1],
     fairPlay: [5, 1],
-    date: "2019-06-17T19:00:00Z"
+    date: "2019-06-17T19:00:00Z",
+    place: {
+      city: "Rennes",
+      country: "FR"
+    }
   },
   {
     teams: ["KR", "NO"],
     goals: [1, 2],
     fairPlay: [2, 0],
-    date: "2019-06-17T19:00:00Z"
+    date: "2019-06-17T19:00:00Z",
+    place: {
+      city: "Reims",
+      country: "FR"
+    }
   }
 ];
 
@@ -52,37 +76,61 @@ const groupBMatches = [
     teams: ["DE", "CN"],
     goals: [1, 0],
     fairPlay: [1, 4],
-    date: "2019-06-08T13:00:00Z"
+    date: "2019-06-08T13:00:00Z",
+    place: {
+      city: "Rennes",
+      country: "FR"
+    }
   },
   {
     teams: ["ES", "ZA"],
     goals: [3, 1],
     fairPlay: [1, 5],
-    date: "2019-06-08T16:00:00Z"
+    date: "2019-06-08T16:00:00Z",
+    place: {
+      city: "Le Havre",
+      country: "FR"
+    }
   },
   {
     teams: ["DE", "ES"],
     goals: [1, 0],
     fairPlay: [1, 0],
-    date: "2019-06-12T16:00:00Z"
+    date: "2019-06-12T16:00:00Z",
+    place: {
+      city: "Valenciennes",
+      country: "FR"
+    }
   },
   {
     teams: ["ZA", "CN"],
     goals: [0, 1],
     fairPlay: [1, 0],
-    date: "2019-06-13T19:00:00Z"
+    date: "2019-06-13T19:00:00Z",
+    place: {
+      city: "Paris",
+      country: "FR"
+    }
   },
   {
     teams: ["ZA", "DE"],
     goals: [0, 4],
     fairPlay: [3, 1],
-    date: "2019-06-17T16:00:00Z"
+    date: "2019-06-17T16:00:00Z",
+    place: {
+      city: "Montpellier",
+      country: "FR"
+    }
   },
   {
     teams: ["CN", "ES"],
     goals: [0, 0],
     fairPlay: [1, 0],
-    date: "2019-06-17T16:00:00Z"
+    date: "2019-06-17T16:00:00Z",
+    place: {
+      city: "Le Havre",
+      country: "FR"
+    }
   }
 ];
 
@@ -93,37 +141,61 @@ const groupCMatches = [
     teams: ["AU", "IT"],
     goals: [1, 2],
     fairPlay: [1, 3],
-    date: "2019-06-09T11:00:00Z"
+    date: "2019-06-09T11:00:00Z",
+    place: {
+      city: "Valenciennes",
+      country: "FR"
+    }
   },
   {
     teams: ["BR", "JM"],
     goals: [3, 0],
     fairPlay: [2, 1],
-    date: "2019-06-09T13:30:00Z"
+    date: "2019-06-09T13:30:00Z",
+    place: {
+      city: "Grenoble",
+      country: "FR"
+    }
   },
   {
     teams: ["AU", "BR"],
     goals: [3, 2],
     fairPlay: [0, 3],
-    date: "2019-06-13T16:00:00Z"
+    date: "2019-06-13T16:00:00Z",
+    place: {
+      city: "Montpellier",
+      country: "FR"
+    }
   },
   {
     teams: ["JM", "IT"],
     goals: [0, 5],
     fairPlay: [2, 0],
-    date: "2019-06-14T16:00:00Z"
+    date: "2019-06-14T16:00:00Z",
+    place: {
+      city: "Reims",
+      country: "FR"
+    }
   },
   {
     teams: ["JM", "AU"],
     goals: [1, 4],
     fairPlay: [1, 1],
-    date: "2019-06-18T19:00:00Z"
+    date: "2019-06-18T19:00:00Z",
+    place: {
+      city: "Grenoble",
+      country: "FR"
+    }
   },
   {
     teams: ["IT", "BR"],
     goals: [0, 1],
     fairPlay: [1, 2],
-    date: "2019-06-18T19:00:00Z"
+    date: "2019-06-18T19:00:00Z",
+    place: {
+      city: "Valenciennes",
+      country: "FR"
+    }
   }
 ];
 
@@ -134,37 +206,61 @@ const groupDMatches = [
     teams: ["GB-ENG", "GB-SCT"],
     goals: [2, 1],
     fairPlay: [0, 2],
-    date: "2019-06-09T16:00:00Z"
+    date: "2019-06-09T16:00:00Z",
+    place: {
+      city: "Nice",
+      country: "FR"
+    }
   },
   {
     teams: ["AR", "JP"],
     goals: [0, 0],
     fairPlay: [0, 3],
-    date: "2019-06-10T16:00:00Z"
+    date: "2019-06-10T16:00:00Z",
+    place: {
+      city: "Paris",
+      country: "FR"
+    }
   },
   {
     teams: ["JP", "GB-SCT"],
     goals: [2, 1],
     fairPlay: [1, 1],
-    date: "2019-06-14T13:00:00Z"
+    date: "2019-06-14T13:00:00Z",
+    place: {
+      city: "Rennes",
+      country: "FR"
+    }
   },
   {
     teams: ["GB-ENG", "AR"],
     goals: [1, 0],
     fairPlay: [1, 2],
-    date: "2019-06-14T19:00:00Z"
+    date: "2019-06-14T19:00:00Z",
+    place: {
+      city: "Le Havre",
+      country: "FR"
+    }
   },
   {
     teams: ["JP", "GB-ENG"],
     goals: [0, 2],
     fairPlay: [0, 0],
-    date: "2019-06-19T19:00:00Z"
+    date: "2019-06-19T19:00:00Z",
+    place: {
+      city: "Nice",
+      country: "FR"
+    }
   },
   {
     teams: ["GB-SCT", "AR"],
     goals: [3, 3],
     fairPlay: [3, 1],
-    date: "2019-06-19T19:00:00Z"
+    date: "2019-06-19T19:00:00Z",
+    place: {
+      city: "Paris",
+      country: "FR"
+    }
   }
 ];
 
@@ -175,37 +271,61 @@ const groupEMatches = [
     teams: ["CA", "CM"],
     goals: [1, 0],
     fairPlay: [0, 2],
-    date: "2019-06-10T19:00:00Z"
+    date: "2019-06-10T19:00:00Z",
+    place: {
+      city: "Montpellier",
+      country: "FR"
+    }
   },
   {
     teams: ["NZ", "NL"],
     goals: [0, 1],
     fairPlay: [0, 0],
-    date: "2019-06-11T13:00:00Z"
+    date: "2019-06-11T13:00:00Z",
+    place: {
+      city: "Le Havre",
+      country: "FR"
+    }
   },
   {
     teams: ["NL", "CM"],
     goals: [3, 1],
     fairPlay: [0, 3],
-    date: "2019-06-15T13:00:00Z"
+    date: "2019-06-15T13:00:00Z",
+    place: {
+      city: "Valenciennes",
+      country: "FR"
+    }
   },
   {
     teams: ["CA", "NZ"],
     goals: [2, 0],
     fairPlay: [0, 0],
-    date: "2019-06-15T19:00:00Z"
+    date: "2019-06-15T19:00:00Z",
+    place: {
+      city: "Grenoble",
+      country: "FR"
+    }
   },
   {
     teams: ["NL", "CA"],
     goals: [2, 1],
     fairPlay: [2, 2],
-    date: "2019-06-20T16:00:00Z"
+    date: "2019-06-20T16:00:00Z",
+    place: {
+      city: "Reims",
+      country: "FR"
+    }
   },
   {
     teams: ["CM", "NZ"],
     goals: [2, 1],
     fairPlay: [1, 1],
-    date: "2019-06-20T16:00:00Z"
+    date: "2019-06-20T16:00:00Z",
+    place: {
+      city: "Montpellier",
+      country: "FR"
+    }
   }
 ];
 
@@ -216,37 +336,61 @@ const groupFMatches = [
     teams: ["CL", "SE"],
     goals: [0, 2],
     fairPlay: [2, 1],
-    date: "2019-06-11T16:00:00Z"
+    date: "2019-06-11T16:00:00Z",
+    place: {
+      city: "Rennes",
+      country: "FR"
+    }
   },
   {
     teams: ["US", "TH"],
     goals: [13, 0],
     fairPlay: [0, 1],
-    date: "2019-06-11T19:00:00Z"
+    date: "2019-06-11T19:00:00Z",
+    place: {
+      city: "Reims",
+      country: "FR"
+    }
   },
   {
     teams: ["SE", "TH"],
     goals: [5, 1],
     fairPlay: [0, 2],
-    date: "2019-06-16T13:00:00Z"
+    date: "2019-06-16T13:00:00Z",
+    place: {
+      city: "Nice",
+      country: "FR"
+    }
   },
   {
     teams: ["US", "CL"],
     goals: [3, 0],
     fairPlay: [2, 3],
-    date: "2019-06-16T16:00:00Z"
+    date: "2019-06-16T16:00:00Z",
+    place: {
+      city: "Paris",
+      country: "FR"
+    }
   },
   {
     teams: ["SE", "US"],
     goals: [0, 2],
     fairPlay: [1, 1],
-    date: "2019-06-20T19:00:00Z"
+    date: "2019-06-20T19:00:00Z",
+    place: {
+      city: "Le Havre",
+      country: "FR"
+    }
   },
   {
     teams: ["TH", "CL"],
     goals: [0, 2],
     fairPlay: [2, 0],
-    date: "2019-06-20T19:00:00Z"
+    date: "2019-06-20T19:00:00Z",
+    place: {
+      city: "Rennes",
+      country: "FR"
+    }
   }
 ];
 
@@ -400,49 +544,81 @@ const data = (lang) => {
         teams: teamsAF1,
         goals: goalsAF1,
         add: addAF1(lang),
-        date: "2019-06-22T15:30:00Z"
+        date: "2019-06-22T15:30:00Z",
+        place: {
+          city: "Grenoble",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF2,
         goals: goalsAF2,
         add: addAF2(lang),
-        date: "2019-06-22T19:00:00Z"
+        date: "2019-06-22T19:00:00Z",
+        place: {
+          city: "Nice",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF3,
         goals: goalsAF3,
         add: addAF3(lang),
-        date: "2019-06-23T15:30:00Z"
+        date: "2019-06-23T15:30:00Z",
+        place: {
+          city: "Valenciennes",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF4,
         goals: goalsAF4,
         add: addAF4(lang),
-        date: "2019-06-23T19:00:00Z"
+        date: "2019-06-23T19:00:00Z",
+        place: {
+          city: "Le Havre",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF5,
         goals: goalsAF5,
         add: addAF5(lang),
-        date: "2019-06-24T16:00:00Z"
+        date: "2019-06-24T16:00:00Z",
+        place: {
+          city: "Reims",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF6,
         goals: goalsAF6,
         add: addAF6(lang),
-        date: "2019-06-24T19:00:00Z"
+        date: "2019-06-24T19:00:00Z",
+        place: {
+          city: "Paris",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF7,
         goals: goalsAF7,
         add: addAF7(lang),
-        date: "2019-06-25T16:00:00Z"
+        date: "2019-06-25T16:00:00Z",
+        place: {
+          city: "Montpellier",
+          country: "FR"
+        }
       },
       {
         teams: teamsAF8,
         goals: goalsAF8,
         add: addAF8(lang),
-        date: "2019-06-25T19:00:00Z"
+        date: "2019-06-25T19:00:00Z",
+        place: {
+          city: "Rennes",
+          country: "FR"
+        }
       }
     ],
     VF: [
@@ -450,25 +626,41 @@ const data = (lang) => {
         teams: teamsVF1,
         goals: goalsVF1,
         add: addVF1(lang),
-        date: "2019-06-27T19:00:00Z"
+        date: "2019-06-27T19:00:00Z",
+        place: {
+          city: "Le Havre",
+          country: "FR"
+        }
       },
       {
         teams: teamsVF2,
         goals: goalsVF2,
         add: addVF2(lang),
-        date: "2019-06-28T19:00:00Z"
+        date: "2019-06-28T19:00:00Z",
+        place: {
+          city: "Paris",
+          country: "FR"
+        }
       },
       {
         teams: teamsVF3,
         goals: goalsVF3,
         add: addVF3(lang),
-        date: "2019-06-29T13:00:00Z"
+        date: "2019-06-29T13:00:00Z",
+        place: {
+          city: "Valenciennes",
+          country: "FR"
+        }
       },
       {
         teams: teamsVF4,
         goals: goalsVF4,
         add: addVF4(lang),
-        date: "2019-06-29T16:30:00Z"
+        date: "2019-06-29T16:30:00Z",
+        place: {
+          city: "Rennes",
+          country: "FR"
+        }
       }
     ],
     HF: [
@@ -476,26 +668,42 @@ const data = (lang) => {
         teams: teamsHF1,
         goals: goalsHF1,
         add: addHF1(lang),
-        date: "2019-07-02T19:00:00Z"
+        date: "2019-07-02T19:00:00Z",
+        place: {
+          city: "Lyon",
+          country: "FR"
+        }
       },
       {
         teams: teamsHF2,
         goals: goalsHF2,
         add: addHF2(lang),
-        date: "2019-07-03T19:00:00Z"
+        date: "2019-07-03T19:00:00Z",
+        place: {
+          city: "Lyon",
+          country: "FR"
+        }
       }
     ],
     "3P": {
       teams: teams3P,
       goals: goals3P,
       add: add3P(lang),
-      date: "2019-07-06T15:00:00Z"
+      date: "2019-07-06T15:00:00Z",
+      place: {
+        city: "Nice",
+        country: "FR"
+      }
     },
     F: {
       teams: teamsF,
       goals: goalsF,
       add: addF(lang),
-      date: "2019-07-07T15:00:00Z"
+      date: "2019-07-07T15:00:00Z",
+      place: {
+        city: "Lyon",
+        country: "FR"
+      }
     },
     champion: champion
   };
