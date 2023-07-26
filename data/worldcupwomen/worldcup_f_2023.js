@@ -158,8 +158,8 @@ const groupCMatches = [
   },
   {
     teams: ["JP", "CR"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 0],
+    fairPlay: [0, 1],
     date: "2023-07-26T05:00:00Z",
     place: {
       city: "Dunedin",
