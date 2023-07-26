@@ -136,6 +136,7 @@ exports.makeTable = (matches, name) => {
     );
     return {
       team,
+      matches: ownMatches.length,
       points,
       goals,
       countergoals,
@@ -147,7 +148,67 @@ exports.makeTable = (matches, name) => {
     };
   });
   const sortedTable = sortFunction(teamData, "wc");
-  return sortedTable;
+  const totalTeams = sortedTable.length;
+  const totalMatches = 2 * (totalTeams - 1);
+  const maxPossiblePoints = sortedTable.map((team) => {
+    const playedMatches = team.matches;
+    const matchesToPlay = totalMatches - playedMatches;
+    const minimalPoints = team.points;
+    const maximalPoints = minimalPoints + 3 * matchesToPlay;
+    return maximalPoints;
+  });
+  const bestRank = sortedTable.map((team, idx, arr) => {
+    const maximalPoints = maxPossiblePoints[idx];
+    const newTable = arr.map((tm) => {
+      if (tm.team === team.team) {
+        return { ...tm, points: maximalPoints };
+      }
+      return tm;
+    });
+    const newSortedTable = newTable.sort((a, b) => {
+      if (a.points > b.points) return -1;
+      if (b.points > a.points) return +1;
+      if (team.points !== maximalPoints) {
+        if (a.team === team.team) return -1;
+        if (b.team === team.team) return +1;
+      } else {
+        if (a.goalDifference > b.goalDifference) return -1;
+        if (b.goalDifference > a.goalDifference) return +1;
+        if (a.goals > b.goals) return -1;
+        if (b.goals > a.goals) return +1;
+      }
+      return 0;
+    });
+    const teamRank = newSortedTable.findIndex((tm) => tm.team === team.team);
+    return teamRank;
+  });
+  const worstRank = sortedTable.map((team, idx, arr) => {
+    const maximalPoints = maxPossiblePoints[idx];
+    const newTable = arr.map((tm, ind) => {
+      if (tm.team === team.team) return tm;
+      return { ...tm, points: maxPossiblePoints[ind] };
+    });
+    const newSortedTable = newTable.sort((a, b) => {
+      if (a.points > b.points) return -1;
+      if (b.points > a.points) return +1;
+      if (team.points !== maximalPoints) {
+        if (a.team === team.team) return +1;
+        if (b.team === team.team) return -1;
+      } else {
+        if (a.goalDifference > b.goalDifference) return -1;
+        if (b.goalDifference > a.goalDifference) return +1;
+        if (a.goals > b.goals) return -1;
+        if (b.goals > a.goals) return +1;
+      }
+      return 0;
+    });
+    const teamRank = newSortedTable.findIndex((tm) => tm.team === team.team);
+    return teamRank;
+  });
+  const enhancedTable = sortedTable.map((team, index) => {
+    return { ...team, best: bestRank[index], worst: worstRank[index] };
+  });
+  return enhancedTable;
 };
 
 exports.makeTable2 = (matches, name) => {
