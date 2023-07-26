@@ -149,7 +149,7 @@ exports.makeTable = (matches, name) => {
   });
   const sortedTable = sortFunction(teamData, "wc");
   const totalTeams = sortedTable.length;
-  const totalMatches = 2 * (totalTeams - 1);
+  const totalMatches = totalTeams - 1;
   const maxPossiblePoints = sortedTable.map((team) => {
     const playedMatches = team.matches;
     const matchesToPlay = totalMatches - playedMatches;
