@@ -298,8 +298,8 @@ const groupEMatches = [
   },
   {
     teams: ["PT", "VN"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 0],
+    fairPlay: [1, 0],
     date: "2023-07-27T07:30:00Z",
     place: {
       city: "Hamilton",
