@@ -103,8 +103,8 @@ const groupBMatches = [
   },
   {
     teams: ["AU", "NG"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 3],
+    fairPlay: [1, 2],
     date: "2023-07-27T10:00:00Z",
     place: {
       city: "Brisbane",
