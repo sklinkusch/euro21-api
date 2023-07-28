@@ -223,8 +223,8 @@ const groupDMatches = [
   },
   {
     teams: ["GB-ENG", "DK"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 0],
+    fairPlay: [0, 0],
     date: "2023-07-28T08:30:00Z",
     place: {
       city: "Sydney",
