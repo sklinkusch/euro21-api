@@ -418,8 +418,8 @@ const groupGMatches = [
   },
   {
     teams: ["AR", "ZA"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 2],
+    fairPlay: [1, 2],
     date: "2023-07-28T00:00:00Z",
     place: {
       city: "Dunedin",
