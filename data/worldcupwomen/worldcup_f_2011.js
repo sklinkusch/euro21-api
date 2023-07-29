@@ -5,37 +5,61 @@ const groupAMatches = [
     teams: ["NG", "FR"],
     goals: [0, 1],
     fairPlay: [0, 0],
-    date: "2011-06-26T13:00:00Z"
+    date: "2011-06-26T13:00:00Z",
+    place: {
+      city: "Sinsheim",
+      country: "DE"
+    }
   },
   {
     teams: ["DE", "CA"],
     goals: [2, 1],
     fairPlay: [2, 0],
-    date: "2011-06-26T16:00:00Z"
+    date: "2011-06-26T16:00:00Z",
+    place: {
+      city: "Berlin",
+      country: "DE"
+    }
   },
   {
     teams: ["CA", "FR"],
     goals: [0, 4],
     fairPlay: [1, 1],
-    date: "2011-06-30T16:00:00Z"
+    date: "2011-06-30T16:00:00Z",
+    place: {
+      city: "Bochum",
+      country: "DE"
+    }
   },
   {
     teams: ["DE", "NG"],
     goals: [1, 0],
     fairPlay: [1, 1],
-    date: "2011-06-30T18:45:00Z"
+    date: "2011-06-30T18:45:00Z",
+    place: {
+      city: "Frankfurt am Main",
+      country: "DE"
+    }
   },
   {
     teams: ["FR", "DE"],
     goals: [2, 4],
     fairPlay: [6, 2],
-    date: "2011-07-05T18:45:00Z"
+    date: "2011-07-05T18:45:00Z",
+    place: {
+      city: "Mönchengladbach",
+      country: "DE"
+    }
   },
   {
     teams: ["CA", "NG"],
     goals: [0, 1],
     fairPlay: [0, 1],
-    date: "2011-07-05T18:45:00Z"
+    date: "2011-07-05T18:45:00Z",
+    place: {
+      city: "Dresden",
+      country: "DE"
+    }
   }
 ];
 
@@ -46,37 +70,61 @@ const groupBMatches = [
     teams: ["JP", "NZ"],
     goals: [2, 1],
     fairPlay: [0, 3],
-    date: "2011-06-27T13:00:00Z"
+    date: "2011-06-27T13:00:00Z",
+    place: {
+      city: "Bochum",
+      country: "DE"
+    }
   },
   {
     teams: ["MX", "GB-ENG"],
     goals: [1, 1],
     fairPlay: [1, 1],
-    date: "2011-06-27T16:00:00Z"
+    date: "2011-06-27T16:00:00Z",
+    place: {
+      city: "Wolfsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["JP", "MX"],
     goals: [4, 0],
     fairPlay: [0, 0],
-    date: "2011-07-01T13:00:00Z"
+    date: "2011-07-01T13:00:00Z",
+    place: {
+      city: "Leverkusen",
+      country: "DE"
+    }
   },
   {
     teams: ["NZ", "GB-ENG"],
     goals: [1, 2],
     fairPlay: [0, 0],
-    date: "2011-07-01T16:15:00Z"
+    date: "2011-07-01T16:15:00Z",
+    place: {
+      city: "Dresden",
+      country: "DE"
+    }
   },
   {
     teams: ["GB-ENG", "JP"],
     goals: [2, 0],
     fairPlay: [0, 0],
-    date: "2011-07-01T16:15:00Z"
+    date: "2011-07-01T16:15:00Z",
+    place: {
+      city: "Augsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["NZ", "MX"],
     goals: [2, 2],
     fairPlay: [1, 1],
-    date: "2011-07-01T16:15:00Z"
+    date: "2011-07-01T16:15:00Z",
+    place: {
+      city: "Sinsheim",
+      country: "DE"
+    }
   }
 ];
 
@@ -87,37 +135,61 @@ const groupCMatches = [
     teams: ["CO", "SE"],
     goals: [0, 1],
     fairPlay: [0, 1],
-    date: "2011-06-28T13:00:00Z"
+    date: "2011-06-28T13:00:00Z",
+    place: {
+      city: "Leverkusen",
+      country: "DE"
+    }
   },
   {
     teams: ["US", "KP"],
     goals: [2, 0],
     fairPlay: [0, 0],
-    date: "2011-06-28T16:15:00Z"
+    date: "2011-06-28T16:15:00Z",
+    place: {
+      city: "Dresden",
+      country: "DE"
+    }
   },
   {
     teams: ["KP", "SE"],
     goals: [0, 1],
     fairPlay: [0, 1],
-    date: "2011-07-02T12:00:00Z"
+    date: "2011-07-02T12:00:00Z",
+    place: {
+      city: "Augsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["US", "CO"],
     goals: [3, 0],
     fairPlay: [1, 0],
-    date: "2011-07-02T16:00:00Z"
+    date: "2011-07-02T16:00:00Z",
+    place: {
+      city: "Sinsheim",
+      country: "DE"
+    }
   },
   {
     teams: ["SE", "US"],
     goals: [2, 1],
     fairPlay: [1, 1],
-    date: "2011-07-06T18:45:00Z"
+    date: "2011-07-06T18:45:00Z",
+    place: {
+      city: "Wolfsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["KP", "CO"],
     goals: [0, 0],
     fairPlay: [0, 0],
-    date: "2011-07-06T18:45:00Z"
+    date: "2011-07-06T18:45:00Z",
+    place: {
+      city: "Bochum",
+      country: "DE"
+    }
   }
 ];
 
@@ -128,37 +200,61 @@ const groupDMatches = [
     teams: ["NO", "GQ"],
     goals: [1, 0],
     fairPlay: [2, 0],
-    date: "2011-06-29T13:00:00Z"
+    date: "2011-06-29T13:00:00Z",
+    place: {
+      city: "Augsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["BR", "AU"],
     goals: [1, 0],
     fairPlay: [0, 0],
-    date: "2011-06-29T16:15:00Z"
+    date: "2011-06-29T16:15:00Z",
+    place: {
+      city: "Mönchengladbach",
+      country: "DE"
+    }
   },
   {
     teams: ["AU", "GQ"],
     goals: [3, 2],
     fairPlay: [1, 3],
-    date: "2011-07-03T12:00:00Z"
+    date: "2011-07-03T12:00:00Z",
+    place: {
+      city: "Bochum",
+      country: "DE"
+    }
   },
   {
     teams: ["BR", "NO"],
     goals: [3, 0],
     fairPlay: [1, 0],
-    date: "2011-07-03T16:15:00Z"
+    date: "2011-07-03T16:15:00Z",
+    place: {
+      city: "Wolfsburg",
+      country: "DE"
+    }
   },
   {
     teams: ["GQ", "BR"],
     goals: [0, 3],
     fairPlay: [3, 2],
-    date: "2011-07-06T16:00:00Z"
+    date: "2011-07-06T16:00:00Z",
+    place: {
+      city: "Frankfurt am Main",
+      country: "DE"
+    }
   },
   {
     teams: ["AU", "NO"],
     goals: [2, 1],
     fairPlay: [2, 1],
-    date: "2011-07-06T16:00:00Z"
+    date: "2011-07-06T16:00:00Z",
+    place: {
+      city: "Leverkusen",
+      country: "DE"
+    }
   }
 ];
 
@@ -258,25 +354,41 @@ const data = (lang) => {
         teams: teamsVF1,
         goals: goalsVF1,
         add: addVF1(lang),
-        date: "2011-07-09T16:00:00Z"
+        date: "2011-07-09T16:00:00Z",
+        place: {
+          city: "Leverkusen",
+          country: "DE"
+        }
       },
       {
         teams: teamsVF2,
         goals: goalsVF2,
         add: addVF2(lang),
-        date: "2011-07-09T18:45:00Z"
+        date: "2011-07-09T18:45:00Z",
+        place: {
+          city: "Wolfsburg",
+          country: "DE"
+        }
       },
       {
         teams: teamsVF3,
         goals: goalsVF3,
         add: addVF3(lang),
-        date: "2011-07-10T11:00:00Z"
+        date: "2011-07-10T11:00:00Z",
+        place: {
+          city: "Augsburg",
+          country: "DE"
+        }
       },
       {
         teams: teamsVF4,
         goals: goalsVF4,
         add: addVF4(lang),
-        date: "2011-07-10T15:30:00Z"
+        date: "2011-07-10T15:30:00Z",
+        place: {
+          city: "Dresden",
+          country: "DE"
+        }
       }
     ],
     HF: [
@@ -284,26 +396,42 @@ const data = (lang) => {
         teams: teamsHF1,
         goals: goalsHF1,
         add: addHF1(lang),
-        date: "2011-07-13T16:00:00Z"
+        date: "2011-07-13T16:00:00Z",
+        place: {
+          city: "Mönchengladbach",
+          country: "DE"
+        }
       },
       {
         teams: teamsHF2,
         goals: goalsHF2,
         add: addHF2(lang),
-        date: "2011-07-13T18:45:00Z"
+        date: "2011-07-13T18:45:00Z",
+        place: {
+          city: "Frankfurt am Main",
+          country: "DE"
+        }
       }
     ],
     "3P": {
       teams: teams3P,
       goals: goals3P,
       add: add3P(lang),
-      date: "2011-07-16T15:30:00Z"
+      date: "2011-07-16T15:30:00Z",
+      place: {
+        city: "Sinsheim",
+        country: "DE"
+      }
     },
     F: {
       teams: teamsF,
       goals: goalsF,
       add: addF(lang),
-      date: "2011-07-17T18:45:00Z"
+      date: "2011-07-17T18:45:00Z",
+      place: {
+        city: "Frankfurt am Main",
+        country: "DE"
+      }
     },
     champion: champion
   };
