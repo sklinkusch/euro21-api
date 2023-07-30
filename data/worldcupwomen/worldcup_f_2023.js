@@ -48,8 +48,8 @@ const groupAMatches = [
   },
   {
     teams: ["NO", "PH"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [6, 0],
+    fairPlay: [1, 4],
     date: "2023-07-30T07:00:00Z",
     place: {
       city: "Auckland",
