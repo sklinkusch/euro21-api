@@ -493,8 +493,8 @@ const groupHMatches = [
   },
   {
     teams: ["DE", "CO"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 2],
+    fairPlay: [1, 3],
     date: "2023-07-30T09:30:00Z",
     place: {
       city: "Sydney",
