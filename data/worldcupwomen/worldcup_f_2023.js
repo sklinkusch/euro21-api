@@ -243,8 +243,8 @@ const groupDMatches = [
   },
   {
     teams: ["HT", "DK"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 2],
+    fairPlay: [0, 1],
     date: "2023-08-01T11:00:00Z",
     place: {
       city: "Perth",
