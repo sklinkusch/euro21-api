@@ -373,8 +373,8 @@ const groupFMatches = [
   },
   {
     teams: ["JM", "BR"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [1, 0],
     date: "2023-08-02T10:00:00Z",
     place: {
       city: "Melbourne",
