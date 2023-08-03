@@ -513,8 +513,8 @@ const groupHMatches = [
   },
   {
     teams: ["KR", "DE"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 1],
+    fairPlay: [0, 1],
     date: "2023-08-03T10:00:00Z",
     place: {
       city: "Brisbane",
