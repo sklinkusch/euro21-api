@@ -560,10 +560,10 @@ const second = mergedGroupTables.map((group) => {
   return teams.map((team) => team.team);
 });
 
-const teamsAF1 = [first[0], second[2]];
-const goalsAF1 = [null, null];
+const teamsAF1 = [first[0], second[2]]; // CH - ES
+const goalsAF1 = [1, 5];
 const addAF1 = () => null;
-const teamsAF2 = [first[2], second[0]];
+const teamsAF2 = [first[2], second[0]]; // JP - NO
 const goalsAF2 = [null, null];
 const addAF2 = () => null;
 const teamsAF3 = [first[4], second[6]];
