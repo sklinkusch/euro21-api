@@ -1,9 +1,4 @@
-const {
-  // localeName,
-  makeTable,
-  getKoTeam,
-  getLoser
-} = require("../helpers");
+const { localeName, makeTable, getKoTeam, getLoser } = require("../helpers");
 
 const groupAMatches = [
   {
@@ -570,8 +565,9 @@ const teamsAF3 = [first[4], second[6]]; // NL - ZA
 const goalsAF3 = [2, 0];
 const addAF3 = () => null;
 const teamsAF4 = [first[6], second[4]]; // SE - US
-const goalsAF4 = [null, null];
-const addAF4 = () => null;
+const goalsAF4 = [5, 4];
+const addAF4 = (lang) =>
+  `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsAF5 = [first[3], second[1]]; // GB-ENG - NG
 const goalsAF5 = [null, null];
 const addAF5 = () => null;
@@ -588,7 +584,7 @@ const addAF8 = () => null;
 const teamsVF1 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF3, goalsAF3)]; // ES - NL
 const goalsVF1 = [null, null];
 const addVF1 = () => null;
-const teamsVF2 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)];
+const teamsVF2 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)]; // JP - SE
 const goalsVF2 = [null, null];
 const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF7, goalsAF7)];
