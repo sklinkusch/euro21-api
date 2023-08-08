@@ -579,7 +579,7 @@ const teamsAF7 = [first[7], second[5]]; // CO - JM
 const goalsAF7 = [1, 0];
 const addAF7 = () => null;
 const teamsAF8 = [first[5], second[7]]; // FR - MA
-const goalsAF8 = [null, null];
+const goalsAF8 = [4, 0];
 const addAF8 = () => null;
 
 const teamsVF1 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF3, goalsAF3)]; // ES - NL
@@ -591,7 +591,7 @@ const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF7, goalsAF7)]; // GB-ENG - CO
 const goalsVF3 = [null, null];
 const addVF3 = () => null;
-const teamsVF4 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF8, goalsAF8)]; // AU -
+const teamsVF4 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF8, goalsAF8)]; // AU - FR
 const goalsVF4 = [null, null];
 const addVF4 = () => null;
 
