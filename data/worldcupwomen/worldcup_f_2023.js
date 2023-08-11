@@ -583,8 +583,8 @@ const goalsAF8 = [4, 0];
 const addAF8 = () => null;
 
 const teamsVF1 = [getKoTeam(teamsAF1, goalsAF1), getKoTeam(teamsAF3, goalsAF3)]; // ES - NL
-const goalsVF1 = [null, null];
-const addVF1 = () => null;
+const goalsVF1 = [2, 1];
+const addVF1 = (lang) => `(1:1) ${localeName("ExtraTime", lang)}`;
 const teamsVF2 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)]; // JP - SE
 const goalsVF2 = [null, null];
 const addVF2 = () => null;
