@@ -596,7 +596,7 @@ const teamsVF4 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF7, goalsAF7)];
 const goalsVF4 = [2, 1];
 const addVF4 = () => null;
 
-const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)]; // ES - JP
+const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)]; // ES - SE
 const goalsHF1 = [null, null];
 const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)]; // AU - GB-ENG
