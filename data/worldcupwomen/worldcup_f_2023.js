@@ -589,8 +589,9 @@ const teamsVF2 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF4, goalsAF4)];
 const goalsVF2 = [1, 2];
 const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF8, goalsAF8)]; // AU - FR
-const goalsVF3 = [null, null];
-const addVF3 = () => null;
+const goalsVF3 = [7, 6];
+const addVF3 = (lang) =>
+  `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsVF4 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF7, goalsAF7)]; // GB-ENG - CO
 const goalsVF4 = [null, null];
 const addVF4 = () => null;
