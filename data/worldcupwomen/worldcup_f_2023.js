@@ -597,17 +597,17 @@ const goalsVF4 = [2, 1];
 const addVF4 = () => null;
 
 const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)]; // ES - SE
-const goalsHF1 = [null, null];
+const goalsHF1 = [2, 1];
 const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)]; // AU - GB-ENG
 const goalsHF2 = [null, null];
 const addHF2 = () => null;
 
-const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
+const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)]; // SE -
 const goals3P = [null, null];
 const add3P = () => null;
 
-const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
+const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)]; // ES -
 const goalsF = [null, null];
 const addF = () => null;
 
