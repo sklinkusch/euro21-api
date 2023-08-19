@@ -604,7 +604,7 @@ const goalsHF2 = [1, 3];
 const addHF2 = () => null;
 
 const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)]; // SE - AU
-const goals3P = [null, null];
+const goals3P = [2, 0];
 const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)]; // ES - GB-ENG
