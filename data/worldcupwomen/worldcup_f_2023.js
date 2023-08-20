@@ -608,7 +608,7 @@ const goals3P = [2, 0];
 const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)]; // ES - GB-ENG
-const goalsF = [null, null];
+const goalsF = [1, 0];
 const addF = () => null;
 
 const champion = getKoTeam(teamsF, goalsF);
