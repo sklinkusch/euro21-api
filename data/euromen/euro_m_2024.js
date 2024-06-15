@@ -83,8 +83,8 @@ const groupBMatches = [
   },
   {
     teams: ["IT", "AL"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 1],
+    fairPlay: [2, 2],
     date: "2024-06-15T19:00:00Z",
     place: {
       city: "Dortmund",
