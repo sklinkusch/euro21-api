@@ -4,6 +4,7 @@ const port = 3500;
 
 const getWorldCupMenData = require("./routes/worldcupmen");
 const getWorldCupWomenData = require("./routes/worldcupwomen");
+const getEuroMenData = require("./routes/euromen");
 
 const useCors = (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -21,6 +22,7 @@ app.use((req, res, next) => useCors(req, res, next));
 
 app.get("/worldcupmen", (req, res) => getWorldCupMenData(req, res));
 app.get("/worldcupwomen", (req, res) => getWorldCupWomenData(req, res));
+app.get("/euromen", (req, res) => getEuroMenData(req, res));
 // app.get("/euro", (req, res) => getEuroData(req, res));
 app.get("*", (req, res) => wrongEndpoint(req, res));
 
