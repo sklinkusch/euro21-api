@@ -203,8 +203,8 @@ const groupCTable = makeTable(groupCMatches, "C");
 const groupDMatches = [
   {
     teams: ["PL", "NL"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 2],
+    fairPlay: [0, 1],
     date: "2024-06-16T13:00:00Z",
     place: {
       city: "Hamburg",
