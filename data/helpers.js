@@ -134,6 +134,11 @@ exports.makeTable = (matches, name) => {
     const ownMatches = matches.filter(
       (match) => match.teams.includes(team) && match.goals[0] != null
     );
+    const live = matches.reduce((acc, currMatch) => {
+      if (acc) return true;
+      if (currMatch.live) return true;
+      return false;
+    }, false);
     return {
       team,
       matches: ownMatches.length,
@@ -144,6 +149,7 @@ exports.makeTable = (matches, name) => {
       fairPlay,
       ownMatches,
       victories,
+      live,
       group: name
     };
   });
