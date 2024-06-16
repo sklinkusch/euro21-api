@@ -138,8 +138,8 @@ const groupBTable = makeTable(groupBMatches, "B");
 const groupCMatches = [
   {
     teams: ["SI", "DK"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 1],
+    fairPlay: [2, 1],
     date: "2024-06-16T16:00:00Z",
     place: {
       city: "Stuttgart",
