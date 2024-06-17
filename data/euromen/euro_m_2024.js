@@ -148,8 +148,8 @@ const groupCMatches = [
   },
   {
     teams: ["RS", "GB-ENG"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 1],
+    fairPlay: [3, 0],
     date: "2024-06-16T19:00:00Z",
     place: {
       city: "Gelsenkirchen",
