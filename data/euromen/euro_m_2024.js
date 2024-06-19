@@ -343,8 +343,8 @@ const groupFMatches = [
   },
   {
     teams: ["PT", "CZ"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 1],
+    fairPlay: [2, 1],
     date: "2024-06-18T19:00:00Z",
     place: {
       city: "Leipzig",
