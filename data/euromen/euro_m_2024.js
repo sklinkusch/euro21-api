@@ -28,8 +28,8 @@ const groupAMatches = [
   },
   {
     teams: ["DE", "HU"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 0],
+    fairPlay: [2, 2],
     date: "2024-06-19T16:00:00Z",
     place: {
       city: "Stuttgart",
