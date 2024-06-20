@@ -38,8 +38,8 @@ const groupAMatches = [
   },
   {
     teams: ["GB-SCT", "CH"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 1],
+    fairPlay: [3, 2],
     date: "2024-06-19T19:00:00Z",
     place: {
       city: "Köln",
