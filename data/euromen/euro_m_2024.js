@@ -29,7 +29,7 @@ const groupAMatches = [
   {
     teams: ["DE", "HU"],
     goals: [2, 0],
-    fairPlay: [2, 2],
+    fairPlay: [2, 3],
     date: "2024-06-19T16:00:00Z",
     place: {
       city: "Stuttgart",
@@ -94,7 +94,7 @@ const groupBMatches = [
   {
     teams: ["HR", "AL"],
     goals: [2, 2],
-    fairPlay: [0, 4],
+    fairPlay: [1, 3],
     date: "2024-06-19T13:00:00Z",
     place: {
       city: "Hamburg",
@@ -159,7 +159,7 @@ const groupCMatches = [
   {
     teams: ["SI", "RS"],
     goals: [1, 1],
-    fairPlay: [1, 4],
+    fairPlay: [2, 4],
     date: "2024-06-20T13:00:00Z",
     place: {
       city: "München",
@@ -233,8 +233,8 @@ const groupDMatches = [
   },
   {
     teams: ["NL", "FR"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [1, 0],
     date: "2024-06-21T19:00:00Z",
     place: {
       city: "Leipzig",
@@ -310,7 +310,7 @@ const groupEMatches = [
     teams: ["SK", "RO"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2024-06-24T16:00:00Z",
+    date: "2024-06-26T16:00:00Z",
     place: {
       city: "Frankfurt am Main",
       country: "DE"
@@ -320,7 +320,7 @@ const groupEMatches = [
     teams: ["UA", "BE"],
     goals: [null, null],
     fairPlay: [null, null],
-    date: "2024-06-24T16:00:00Z",
+    date: "2024-06-26T16:00:00Z",
     place: {
       city: "Stuttgart",
       country: "DE"
