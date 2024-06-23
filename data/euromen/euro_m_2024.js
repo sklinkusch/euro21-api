@@ -298,8 +298,8 @@ const groupEMatches = [
   },
   {
     teams: ["BE", "RO"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 0],
+    fairPlay: [1, 2],
     date: "2024-06-22T19:00:00Z",
     place: {
       city: "Köln",
