@@ -243,8 +243,8 @@ const groupDMatches = [
   },
   {
     teams: ["NL", "AT"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [2, 3],
+    fairPlay: [0, 3],
     date: "2024-06-25T16:00:00Z",
     place: {
       city: "Berlin",
@@ -253,8 +253,8 @@ const groupDMatches = [
   },
   {
     teams: ["FR", "PL"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 1],
+    fairPlay: [1, 3],
     date: "2024-06-25T16:00:00Z",
     place: {
       city: "Dortmund",
