@@ -308,8 +308,8 @@ const groupEMatches = [
   },
   {
     teams: ["SK", "RO"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [1, 1],
+    fairPlay: [1, 4],
     date: "2024-06-26T16:00:00Z",
     place: {
       city: "Frankfurt am Main",
@@ -318,8 +318,8 @@ const groupEMatches = [
   },
   {
     teams: ["UA", "BE"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [1, 1],
     date: "2024-06-26T16:00:00Z",
     place: {
       city: "Stuttgart",
