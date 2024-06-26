@@ -139,7 +139,7 @@ const groupCMatches = [
   {
     teams: ["SI", "DK"],
     goals: [1, 1],
-    fairPlay: [2, 1],
+    fairPlay: [3, 1],
     date: "2024-06-16T16:00:00Z",
     place: {
       city: "Stuttgart",
@@ -178,8 +178,8 @@ const groupCMatches = [
   },
   {
     teams: ["GB-ENG", "SI"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [3, 2],
     date: "2024-06-25T19:00:00Z",
     place: {
       city: "Köln",
@@ -188,8 +188,8 @@ const groupCMatches = [
   },
   {
     teams: ["DK", "RS"],
-    goals: [null, null],
-    fairPlay: [null, null],
+    goals: [0, 0],
+    fairPlay: [2, 2],
     date: "2024-06-25T19:00:00Z",
     place: {
       city: "München",
