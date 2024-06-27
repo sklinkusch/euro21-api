@@ -83,7 +83,7 @@ exports.localeName = (code, lang) => {
   return "";
 };
 
-exports.makeTable = (matches, name) => {
+exports.makeTable = (matches, name, mode = "wc") => {
   const teamsRaw = matches.map((match) => match.teams).flat();
   const teamSet = new Set(teamsRaw);
   const teams = Array.from(teamSet);
@@ -153,7 +153,7 @@ exports.makeTable = (matches, name) => {
       group: name
     };
   });
-  const sortedTable = sortFunction(teamData, "wc");
+  const sortedTable = sortFunction(teamData, mode);
   const totalTeams = sortedTable.length;
   const totalMatches = totalTeams - 1;
   const maxPossiblePoints = sortedTable.map((team) => {
