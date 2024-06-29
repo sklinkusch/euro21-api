@@ -453,7 +453,7 @@ const wTeams = bestThirds
   .map((item) => item.team);
 
 const teamsAF1 = [second[0], second[1]];
-const goalsAF1 = [null, null];
+const goalsAF1 = [2, 0];
 const addAF1 = () => null;
 const teamsAF2 = [first[0], second[2]];
 const goalsAF2 = [null, null];
