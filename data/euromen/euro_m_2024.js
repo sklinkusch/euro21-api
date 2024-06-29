@@ -438,7 +438,7 @@ const getAssociation = (winningCombination) => {
     case "BCEF":
     case "BDEF":
     case "CDEF":
-      return [5, 7, 2, 3];
+      return [5, 7, 3, 2];
     case "BCDE":
       return [7, 5, 2, 3];
     default:
