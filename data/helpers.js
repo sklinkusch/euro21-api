@@ -659,6 +659,32 @@ const sortFunction = (teamData, mode) => {
   } else {
     let teamsAfterDirectComparisonA = teamsPoints.slice();
     let teamsAfterDirectComparisonB = [];
+    if (teamsAfterDirectComparisonA[0].length === teamData.length) {
+      const teamTable = teamsAfterDirectComparisonA[0].sort((teamA, teamB) => {
+        const {
+          points: pointsA,
+          goals: goalsA,
+          goalDifference: diffA,
+          fairPlay: fpA
+        } = teamA;
+        const {
+          points: pointsB,
+          goals: goalsB,
+          goalDifference: diffB,
+          fairPlay: fpB
+        } = teamB;
+        if (pointsA > pointsB) return -1;
+        if (pointsB > pointsA) return +1;
+        if (diffA > diffB) return -1;
+        if (diffB > diffA) return +1;
+        if (goalsA > goalsB) return -1;
+        if (goalsB > goalsA) return +1;
+        if (fpA < fpB) return -1;
+        if (fpB < fpA) return +1;
+        return 0;
+      });
+      return teamTable;
+    }
     teamsAfterDirectComparisonA.forEach((singleTeam) => {
       if (singleTeam.length === 1) {
         teamsAfterDirectComparisonB.push(singleTeam);
@@ -842,6 +868,6 @@ const sortFunction = (teamData, mode) => {
         }
       }
     });
-    return teamsAfterDirectComparisonC;
+    return teamsAfterDirectComparisonC.sort((teamA, teamB) => teamA - teamB);
   }
 };
