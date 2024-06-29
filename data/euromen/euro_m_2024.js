@@ -456,7 +456,7 @@ const teamsAF1 = [second[0], second[1]];
 const goalsAF1 = [2, 0];
 const addAF1 = () => null;
 const teamsAF2 = [first[0], second[2]];
-const goalsAF2 = [null, null];
+const goalsAF2 = [2, 0];
 const addAF2 = () => null;
 const teamsAF3 = [first[2], wTeams[assoc.indexOf(3)]];
 const goalsAF3 = [null, null];
