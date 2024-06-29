@@ -753,20 +753,30 @@ const sortFunction = (teamData, mode) => {
     let teamsAfterDirectComparisonC = [];
     teamsAfterDirectComparisonB.forEach((team, index, array) => {
       if (index === 0) {
-        teamsAfterDirectComparisonC.push({ ...team, rank: 1 });
+        if (Array.isArray(team)) {
+          teamsAfterDirectComparisonC.push({
+            ...Object.values(team)[0],
+            rank: 1
+          });
+        } else {
+          teamsAfterDirectComparisonC.push({ ...team, rank: 1 });
+        }
       } else {
+        const rawTeam = Array.isArray(team) ? team[0] : team;
         const {
           team: currTeam,
           points: currPoints,
           goalDifference: currDiff,
           goals: currGoals,
-          ownMatches: currOwnMatches
-        } = team;
+          ownMatches: currOwnMatches,
+          fairPlay: ownFairPlay
+        } = rawTeam;
         const {
           team: prevTeam,
           points: prevPoints,
           goalDifference: prevDiff,
-          goals: prevGoals
+          goals: prevGoals,
+          fairPlay: prevFairPlay
         } = array[index - 1];
         if (
           currPoints === prevPoints &&
@@ -810,6 +820,8 @@ const sortFunction = (teamData, mode) => {
             teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
           } else if (otherGoals > ownGoals) {
             teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          } else if (prevFairPlay < ownFairPlay) {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
           } else {
             teamsAfterDirectComparisonC.push({
               ...team,
@@ -819,7 +831,14 @@ const sortFunction = (teamData, mode) => {
             });
           }
         } else {
-          teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          if (Array.isArray(team)) {
+            teamsAfterDirectComparisonC.push({
+              ...Object.values(team)[0],
+              rank: index + 1
+            });
+          } else {
+            teamsAfterDirectComparisonC.push({ ...team, rank: index + 1 });
+          }
         }
       }
     });
