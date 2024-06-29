@@ -1,8 +1,8 @@
 const {
   // localeName,
   makeTable,
-  makeEasyTable
-  // getKoTeam
+  makeEasyTable,
+  getKoTeam
 } = require("../helpers");
 
 const groupAMatches = [
@@ -477,31 +477,31 @@ const teamsAF8 = [first[3], second[5]];
 const goalsAF8 = [null, null];
 const addAF8 = () => null;
 
-// const teamsVF1 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF2, goalsAF2)];
-// const goalsVF1 = [null, null];
-// const addVF1 = () => null;
-// const teamsVF2 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF5, goalsAF5)];
-// const goalsVF2 = [null, null];
-// const addVF2 = () => null;
-// const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF1, goalsAF1)];
-// const goalsVF3 = [null, null];
-// const addVF3 = () => null;
-// const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
-// const goalsVF4 = [null, null];
-// const addVF4 = () => null;
+const teamsVF1 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF2, goalsAF2)];
+const goalsVF1 = [null, null];
+const addVF1 = () => null;
+const teamsVF2 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF5, goalsAF5)];
+const goalsVF2 = [null, null];
+const addVF2 = () => null;
+const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF1, goalsAF1)];
+const goalsVF3 = [null, null];
+const addVF3 = () => null;
+const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
+const goalsVF4 = [null, null];
+const addVF4 = () => null;
 
-// const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
-// const goalsHF1 = [null, null];
-// const addHF1 = () => null;
-// const teamsHF2 = [getKoTeam(teamsVF4, goalsVF4), getKoTeam(teamsVF3, goalsVF3)];
-// const goalsHF2 = [null, null];
-// const addHF2 = () => null;
+const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
+const goalsHF1 = [null, null];
+const addHF1 = () => null;
+const teamsHF2 = [getKoTeam(teamsVF4, goalsVF4), getKoTeam(teamsVF3, goalsVF3)];
+const goalsHF2 = [null, null];
+const addHF2 = () => null;
 
-// const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
-// const goalsF = [null, null];
-// const addF = () => null;
+const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
+const goalsF = [null, null];
+const addF = () => null;
 
-// const champion = getKoTeam(teamsF, goalsF);
+const champion = getKoTeam(teamsF, goalsF);
 
 const data = (lang) => {
   return {
@@ -614,82 +614,82 @@ const data = (lang) => {
           country: "DE"
         }
       }
-    ]
-    // VF: [
-    //   {
-    //     teams: teamsVF1,
-    //     goals: goalsVF1,
-    //     add: addVF1(lang),
-    //     date: "2024-07-05T16:00:00Z",
-    //     place: {
-    //       city: "Stuttgart",
-    //       country: "DE"
-    //     }
-    //   },
-    //   {
-    //     teams: teamsVF2,
-    //     goals: goalsVF2,
-    //     add: addVF2(lang),
-    //     date: "2024-07-05T19:00:00Z",
-    //     place: {
-    //       city: "Hamburg",
-    //       country: "DE"
-    //     }
-    //   },
-    //   {
-    //     teams: teamsVF3,
-    //     goals: goalsVF3,
-    //     add: addVF3(lang),
-    //     date: "2024-07-06T16:00:00Z",
-    //     place: {
-    //       city: "Düsseldorf",
-    //       country: "DE"
-    //     }
-    //   },
-    //   {
-    //     teams: teamsVF4,
-    //     goals: goalsVF4,
-    //     add: addVF4(lang),
-    //     date: "2024-07-06T19:30:00Z",
-    //     place: {
-    //       city: "Berlin",
-    //       country: "DE"
-    //     }
-    //   }
-    // ],
-    // HF: [
-    //   {
-    //     teams: teamsHF1,
-    //     goals: goalsHF1,
-    //     add: addHF1(lang),
-    //     date: "2024-07-09T19:00:00Z",
-    //     place: {
-    //       city: "München",
-    //       country: "DE"
-    //     }
-    //   },
-    //   {
-    //     teams: teamsHF2,
-    //     goals: goalsHF2,
-    //     add: addHF2(lang),
-    //     date: "2024-07-10T19:00:00Z",
-    //     place: {
-    //       city: "Dortmund",
-    //       country: "DE"
-    //     }
-    //   }
-    // ],
-    // F: {
-    //   teams: teamsF,
-    //   goals: goalsF,
-    //   add: addF(lang),
-    //   date: "2024-07-14T19:00:00Z",
-    //   place: {
-    //     city: "Berlin",
-    //     country: "DE"
-    //   }
-    // },
-    // champion: champion
+    ],
+    VF: [
+      {
+        teams: teamsVF1,
+        goals: goalsVF1,
+        add: addVF1(lang),
+        date: "2024-07-05T16:00:00Z",
+        place: {
+          city: "Stuttgart",
+          country: "DE"
+        }
+      },
+      {
+        teams: teamsVF2,
+        goals: goalsVF2,
+        add: addVF2(lang),
+        date: "2024-07-05T19:00:00Z",
+        place: {
+          city: "Hamburg",
+          country: "DE"
+        }
+      },
+      {
+        teams: teamsVF3,
+        goals: goalsVF3,
+        add: addVF3(lang),
+        date: "2024-07-06T16:00:00Z",
+        place: {
+          city: "Düsseldorf",
+          country: "DE"
+        }
+      },
+      {
+        teams: teamsVF4,
+        goals: goalsVF4,
+        add: addVF4(lang),
+        date: "2024-07-06T19:00:00Z",
+        place: {
+          city: "Berlin",
+          country: "DE"
+        }
+      }
+    ],
+    HF: [
+      {
+        teams: teamsHF1,
+        goals: goalsHF1,
+        add: addHF1(lang),
+        date: "2024-07-09T19:00:00Z",
+        place: {
+          city: "München",
+          country: "DE"
+        }
+      },
+      {
+        teams: teamsHF2,
+        goals: goalsHF2,
+        add: addHF2(lang),
+        date: "2024-07-10T19:00:00Z",
+        place: {
+          city: "Dortmund",
+          country: "DE"
+        }
+      }
+    ],
+    F: {
+      teams: teamsF,
+      goals: goalsF,
+      add: addF(lang),
+      date: "2024-07-14T19:00:00Z",
+      place: {
+        city: "Berlin",
+        country: "DE"
+      }
+    },
+    champion: champion
   };
 };
 
