@@ -1,5 +1,5 @@
 const {
-  // localeName,
+  localeName,
   makeTable,
   makeEasyTable,
   getKoTeam
@@ -459,8 +459,8 @@ const teamsAF2 = [first[0], second[2]];
 const goalsAF2 = [2, 0];
 const addAF2 = () => null;
 const teamsAF3 = [first[2], wTeams[assoc.indexOf(3)]];
-const goalsAF3 = [null, null];
-const addAF3 = () => null;
+const goalsAF3 = [2, 1];
+const addAF3 = (lang) => `(1:1) ${localeName("ExtraTime", lang)}`;
 const teamsAF4 = [first[1], wTeams[assoc.indexOf(2)]];
 const goalsAF4 = [null, null];
 const addAF4 = () => null;
