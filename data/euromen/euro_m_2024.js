@@ -471,7 +471,7 @@ const teamsAF6 = [first[5], wTeams[assoc.indexOf(5)]];
 const goalsAF6 = [3, 0];
 const addAF6 = (lang) => `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsAF7 = [first[4], wTeams[assoc.indexOf(7)]];
-const goalsAF7 = [null, null];
+const goalsAF7 = [0, 3];
 const addAF7 = () => null;
 const teamsAF8 = [first[3], second[5]];
 const goalsAF8 = [null, null];
