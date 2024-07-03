@@ -474,7 +474,7 @@ const teamsAF7 = [first[4], wTeams[assoc.indexOf(7)]];
 const goalsAF7 = [0, 3];
 const addAF7 = () => null;
 const teamsAF8 = [first[3], second[5]];
-const goalsAF8 = [null, null];
+const goalsAF8 = [1, 2];
 const addAF8 = () => null;
 
 const teamsVF1 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF2, goalsAF2)];
