@@ -469,7 +469,8 @@ const goalsAF5 = [1, 0];
 const addAF5 = () => null;
 const teamsAF6 = [first[5], wTeams[assoc.indexOf(5)]];
 const goalsAF6 = [3, 0];
-const addAF6 = (lang) => `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
+const addAF6 = (lang) =>
+  `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsAF7 = [first[4], wTeams[assoc.indexOf(7)]];
 const goalsAF7 = [0, 3];
 const addAF7 = () => null;
@@ -478,8 +479,8 @@ const goalsAF8 = [1, 2];
 const addAF8 = () => null;
 
 const teamsVF1 = [getKoTeam(teamsAF4, goalsAF4), getKoTeam(teamsAF2, goalsAF2)];
-const goalsVF1 = [null, null];
-const addVF1 = () => null;
+const goalsVF1 = [2, 1];
+const addVF1 = (lang) => `(1:1) ${localeName("ExtraTime", lang)}`;
 const teamsVF2 = [getKoTeam(teamsAF6, goalsAF6), getKoTeam(teamsAF5, goalsAF5)];
 const goalsVF2 = [null, null];
 const addVF2 = () => null;
