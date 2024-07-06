@@ -493,7 +493,7 @@ const addVF3 = (lang) =>
     lang
   )}`;
 const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
-const goalsVF4 = [null, null];
+const goalsVF4 = [2, 1];
 const addVF4 = () => null;
 
 const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
