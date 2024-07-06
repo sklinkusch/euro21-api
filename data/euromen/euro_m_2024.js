@@ -486,8 +486,12 @@ const goalsVF2 = [3, 5];
 const addVF2 = (lang) =>
   `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF1, goalsAF1)];
-const goalsVF3 = [null, null];
-const addVF3 = () => null;
+const goalsVF3 = [5, 3];
+const addVF3 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName(
+    "ExtraTime",
+    lang
+  )}`;
 const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
 const goalsVF4 = [null, null];
 const addVF4 = () => null;
