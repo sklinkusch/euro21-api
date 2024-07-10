@@ -497,7 +497,7 @@ const goalsVF4 = [2, 1];
 const addVF4 = () => null;
 
 const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
-const goalsHF1 = [null, null];
+const goalsHF1 = [2, 1];
 const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF4, goalsVF4), getKoTeam(teamsVF3, goalsVF3)];
 const goalsHF2 = [null, null];
