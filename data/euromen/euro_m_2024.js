@@ -504,7 +504,7 @@ const goalsHF2 = [1, 2];
 const addHF2 = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
-const goalsF = [null, null];
+const goalsF = [2, 1];
 const addF = () => null;
 
 const champion = getKoTeam(teamsF, goalsF);
