@@ -245,15 +245,15 @@ const groupEMatches = [
   },
   {
     teams: ["CW", "CI"],
-    goals: [2, 1],
-    fairPlay: [3, 1],
+    goals: [0, 2],
+    fairPlay: [2, 1],
     date: "2026-06-25T20:00Z",
     place: PHILADELPHIA
   },
   {
     teams: ["EC", "DE"],
-    goals: [0, 2],
-    fairPlay: [2, 1],
+    goals: [2, 1],
+    fairPlay: [3, 1],
     date: "2026-06-25T20:00Z",
     place: NEW_YORK
   }
