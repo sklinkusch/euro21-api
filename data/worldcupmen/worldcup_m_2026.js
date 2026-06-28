@@ -607,7 +607,10 @@ const mergedGroupTables = [
 
 const first = mergedGroupTables.map((group) => group[0].team);
 const second = mergedGroupTables.map((group) => group[1].team);
-const thirdForTable = mergedGroupTables.map((group) => group[2]);
+const thirdForTable = mergedGroupTables.map((group, index) => ({
+  ...group[2],
+  group: String.fromCharCode(65 + index)
+}));
 
 const thirdTable =
   thirdForTable.length === 12 ? makeEasyTable(thirdForTable, "wc") : undefined;
