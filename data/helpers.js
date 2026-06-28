@@ -1,63 +1,59 @@
 const locales = require("./locales.json");
 
 exports.getKoTeam = (teams, goals) => {
-  const teamAType = typeof teams[0];
-  const teamBType = typeof teams[1];
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
       return teams[0];
     } else if (goals[1] > goals[0]) {
       return teams[1];
     } else {
-      if (teamAType === "string" && teamBType === "string") {
+      if (typeof teams[0] === "string" && typeof teams[1] === "string") {
         return [teams[0], teams[1]];
-      } else if (teamAType === "string" && teamBType !== "string") {
+      } else if (typeof teams[0] === "string" && Array.isArray(teams[1])) {
         return [teams[0], ...teams[1]];
-      } else if (teamAType !== "string" && teamBType === "string") {
+      } else if (Array.isArray(teams[0]) && typeof teams[1] === "string") {
         return [...teams[0], teams[1]];
-      } else {
+      } else if (Array.isArray(teams[0]) && Array.isArray(teams[1])) {
         return Array.from(new Set([...teams[0], ...teams[1]]));
       }
     }
   }
-  if (teamAType === "string" && teamBType === "string") {
+  if (typeof teams[0] === "string" && typeof teams[1] === "string") {
     return [teams[0], teams[1]];
-  } else if (teamAType === "string" && teamBType !== "string") {
+  } else if (typeof teams[0] === "string" && Array.isArray(teams[1])) {
     return [teams[0], ...teams[1]];
-  } else if (teamAType !== "string" && teamBType === "string") {
+  } else if (Array.isArray(teams[0]) && typeof teams[1] === "string") {
     return [...teams[0], teams[1]];
-  } else {
+  } else if (Array.isArray(teams[0]) && Array.isArray(teams[1])) {
     return Array.from(new Set([...teams[0], ...teams[1]]));
   }
 };
 
 exports.getLoser = (teams, goals) => {
-  const teamAType = typeof teams[0];
-  const teamBType = typeof teams[1];
   if (typeof goals[0] === "number" && typeof goals[1] === "number") {
     if (goals[0] > goals[1]) {
       return teams[1];
     } else if (goals[1] > goals[0]) {
       return teams[0];
     } else {
-      if (teamAType === "string" && teamBType === "string") {
+      if (typeof teams[0] === "string" && typeof teams[1] === "string") {
         return [teams[0], teams[1]];
-      } else if (teamAType === "string" && teamBType !== "string") {
+      } else if (typeof teams[0] === "string" && Array.isArray(teams[1])) {
         return [teams[0], ...teams[1]];
-      } else if (teamAType !== "string" && teamBType === "string") {
+      } else if (Array.isArray(teams[0]) && typeof teams[1] === "string") {
         return [...teams[0], teams[1]];
-      } else {
+      } else if (Array.isArray(teams[0]) && Array.isArray(teams[1])) {
         return Array.from(new Set([...teams[0], ...teams[1]]));
       }
     }
   }
-  if (teamAType === "string" && teamBType === "string") {
+  if (typeof teams[0] === "string" && typeof teams[1] === "string") {
     return [teams[0], teams[1]];
-  } else if (teamAType === "string" && teamBType !== "string") {
+  } else if (typeof teams[0] === "string" && Array.isArray(teams[1])) {
     return [teams[0], ...teams[1]];
-  } else if (teamAType !== "string" && teamBType === "string") {
+  } else if (Array.isArray(teams[0]) && typeof teams[1] === "string") {
     return [...teams[0], teams[1]];
-  } else {
+  } else if (Array.isArray(teams[0]) && Array.isArray(teams[1])) {
     return Array.from(new Set([...teams[0], ...teams[1]]));
   }
 };
@@ -95,8 +91,8 @@ exports.makeTable = (matches, name, mode = "wc") => {
         return curr.goals[index] > curr.goals[indexOp]
           ? acc + 3
           : curr.goals[index] === curr.goals[indexOp]
-          ? acc + 1
-          : acc;
+            ? acc + 1
+            : acc;
       }
       return acc;
     }, 0);
@@ -229,8 +225,8 @@ exports.makeTable2 = (matches, name) => {
         return curr.goals[index] > curr.goals[indexOp]
           ? acc + 2
           : curr.goals[index] === curr.goals[indexOp]
-          ? acc + 1
-          : acc;
+            ? acc + 1
+            : acc;
       }
       return acc;
     }, 0);
@@ -333,14 +329,14 @@ const sortTeamsThree = (sortedTeamsRaw, teamSort) => {
     team1Index === intermediateIndex
       ? "A"
       : team2Index === intermediateIndex
-      ? "B"
-      : "C";
+        ? "B"
+        : "C";
   const identifierMax =
     team1Index === maxIndex
       ? "A"
       : team2Index === intermediateIndex
-      ? "B"
-      : "C";
+        ? "B"
+        : "C";
   if (diffMinInt === 1 && diffIntMax === 1) {
     for (let i = 0; i < minIndex; i++) {
       sorted[i] = sortedTeamsRaw[i];
@@ -359,14 +355,14 @@ const sortTeamsThree = (sortedTeamsRaw, teamSort) => {
       identifierMin === "A"
         ? team1Dataset
         : identifierMin === "B"
-        ? team2Dataset
-        : team3Dataset;
+          ? team2Dataset
+          : team3Dataset;
     sorted[intermediateIndex] =
       identifierInt === "A"
         ? team1Dataset
         : identifierInt === "B"
-        ? team2Dataset
-        : team3Dataset;
+          ? team2Dataset
+          : team3Dataset;
     for (let j = intermediateIndex + 1; j < sortedTeamsRaw.length; j++) {
       sorted[j] = sortedTeamsRaw[j];
     }
@@ -378,14 +374,14 @@ const sortTeamsThree = (sortedTeamsRaw, teamSort) => {
       identifierInt === "A"
         ? team1Dataset
         : identifierInt === "B"
-        ? team2Dataset
-        : team3Dataset;
+          ? team2Dataset
+          : team3Dataset;
     sorted[maxIndex] =
       identifierMax === "A"
         ? team1Dataset
         : identifierMax === "B"
-        ? team2Dataset
-        : team3Dataset;
+          ? team2Dataset
+          : team3Dataset;
     for (let j = maxIndex + 1; j < sortedTeamsRaw.length; j++) {
       sorted[j] = sortedTeamsRaw[j];
     }
@@ -508,8 +504,8 @@ const sortFunction = (teamData, mode) => {
               return curr.goals[index] > curr.goals[indexOp]
                 ? pts + 3
                 : curr.goals[index] === curr.goals[indexOp]
-                ? pts + 1
-                : pts;
+                  ? pts + 1
+                  : pts;
             }
             return pts;
           }, 0);
@@ -545,8 +541,8 @@ const sortFunction = (teamData, mode) => {
               return curr.goals[index] > curr.goals[indexOp]
                 ? pts + 3
                 : curr.goals[index] === curr.goals[indexOp]
-                ? pts + 1
-                : pts;
+                  ? pts + 1
+                  : pts;
             }
             return pts;
           }, 0);
@@ -703,8 +699,8 @@ const sortFunction = (teamData, mode) => {
               return curr.goals[index] > curr.goals[indexOp]
                 ? acc + 3
                 : curr.goals[index] === curr.goals[indexOp]
-                ? acc + 1
-                : acc;
+                  ? acc + 1
+                  : acc;
             }
             return acc;
           }, 0);
@@ -739,8 +735,8 @@ const sortFunction = (teamData, mode) => {
               return curr.goals[index] > curr.goals[indexOp]
                 ? acc + 3
                 : curr.goals[index] === curr.goals[indexOp]
-                ? acc + 1
-                : acc;
+                  ? acc + 1
+                  : acc;
             }
             return acc;
           }, 0);

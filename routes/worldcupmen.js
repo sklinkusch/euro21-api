@@ -1,3 +1,4 @@
+const WM2026 = require("../data/worldcupmen/worldcup_m_2026");
 const WM2022 = require("../data/worldcupmen/worldcup_m_2022");
 const WM2018 = require("../data/worldcupmen/worldcup_m_2018");
 const WM2014 = require("../data/worldcupmen/worldcup_m_2014");
@@ -11,6 +12,8 @@ const WM1990 = require("../data/worldcupmen/worldcup_m_1990");
 function getWorldCupMenData(req, res) {
   const { year, lang } = req.query;
   switch (year) {
+    case "2026":
+      return res.status(200).json(WM2026(lang));
     case "2022":
       return res.status(200).json(WM2022(lang));
     case "2018":
