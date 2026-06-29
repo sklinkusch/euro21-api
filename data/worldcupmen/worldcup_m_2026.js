@@ -617,7 +617,7 @@ const thirdTable =
 const third = thirdForTable.map((item) => item.team);
 
 const teamsSF01 = [second[0], second[1]]; // ZA - CA
-const goalsSF01 = [null, null];
+const goalsSF01 = [0, 1];
 const addSF01 = () => null;
 const teamsSF02 = [first[2], second[5]]; // BR - JP
 const goalsSF02 = [null, null];
