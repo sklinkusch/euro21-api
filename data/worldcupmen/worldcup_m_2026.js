@@ -620,7 +620,7 @@ const teamsSF01 = [second[0], second[1]]; // ZA - CA
 const goalsSF01 = [0, 1];
 const addSF01 = () => null;
 const teamsSF02 = [first[2], second[5]]; // BR - JP
-const goalsSF02 = [null, null];
+const goalsSF02 = [2, 1];
 const addSF02 = () => null;
 const teamsSF03 = [first[4], third[3]]; // DE - PY
 const goalsSF03 = [null, null];
