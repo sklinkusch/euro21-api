@@ -631,7 +631,7 @@ const goalsSF04 = [2, 3];
 const addSF04 = (lang) =>
   `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
 const teamsSF05 = [second[4], second[8]]; // CI - NO
-const goalsSF05 = [null, null];
+const goalsSF05 = [1, 2];
 const addSF05 = () => null;
 const teamsSF06 = [first[8], third[5]]; // FR - SE
 const goalsSF06 = [null, null];
