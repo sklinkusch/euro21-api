@@ -1,7 +1,7 @@
 const {
   getKoTeam,
   getLoser,
-  // localeName,
+  localeName,
   makeTable,
   makeEasyTable
 } = require("../helpers");
@@ -623,8 +623,9 @@ const teamsSF02 = [first[2], second[5]]; // BR - JP
 const goalsSF02 = [2, 1];
 const addSF02 = () => null;
 const teamsSF03 = [first[4], third[3]]; // DE - PY
-const goalsSF03 = [null, null];
-const addSF03 = () => null;
+const goalsSF03 = [3, 4];
+const addSF03 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
 const teamsSF04 = [first[5], second[2]]; // NL - MA
 const goalsSF04 = [null, null];
 const addSF04 = () => null;
