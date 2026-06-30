@@ -627,8 +627,9 @@ const goalsSF03 = [3, 4];
 const addSF03 = (lang) =>
   `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
 const teamsSF04 = [first[5], second[2]]; // NL - MA
-const goalsSF04 = [1, 2];
-const addSF04 = (lang) => `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
+const goalsSF04 = [2, 3];
+const addSF04 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
 const teamsSF05 = [second[4], second[8]]; // CI - NO
 const goalsSF05 = [null, null];
 const addSF05 = () => null;
