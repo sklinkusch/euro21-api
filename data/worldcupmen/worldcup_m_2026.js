@@ -634,7 +634,7 @@ const teamsSF05 = [second[4], second[8]]; // CI - NO
 const goalsSF05 = [1, 2];
 const addSF05 = () => null;
 const teamsSF06 = [first[8], third[5]]; // FR - SE
-const goalsSF06 = [null, null];
+const goalsSF06 = [3, 0];
 const addSF06 = () => null;
 const teamsSF07 = [first[0], third[4]]; // MX - EC
 const goalsSF07 = [null, null];
