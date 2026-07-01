@@ -660,7 +660,7 @@ const addSF13 = () => null;
 const teamsSF14 = [second[3], second[6]]; // AU - EG
 const goalsSF14 = [null, null];
 const addSF14 = () => null;
-const teamsSF15 = [first[9], second[9]]; // AR - CV
+const teamsSF15 = [first[9], second[7]]; // AR - CV
 const goalsSF15 = [null, null];
 const addSF15 = () => null;
 const teamsSF16 = [first[10], third[11]]; // CO - GH
