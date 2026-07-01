@@ -637,7 +637,7 @@ const teamsSF06 = [first[8], third[5]]; // FR - SE
 const goalsSF06 = [3, 0];
 const addSF06 = () => null;
 const teamsSF07 = [first[0], third[4]]; // MX - EC
-const goalsSF07 = [null, null];
+const goalsSF07 = [2, 0];
 const addSF07 = () => null;
 const teamsSF08 = [first[11], third[10]]; // GB-ENG - CD
 const goalsSF08 = [null, null];
@@ -847,7 +847,7 @@ const data = (lang) => {
         teams: teamsSF07,
         goals: goalsSF07,
         add: addSF07(lang),
-        date: "2026-07-01T01:00Z",
+        date: "2026-07-01T02:00Z",
         place: MEXICO_CITY
       },
       {
