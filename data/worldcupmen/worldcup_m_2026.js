@@ -640,7 +640,7 @@ const teamsSF07 = [first[0], third[4]]; // MX - EC
 const goalsSF07 = [2, 0];
 const addSF07 = () => null;
 const teamsSF08 = [first[11], third[10]]; // GB-ENG - CD
-const goalsSF08 = [null, null];
+const goalsSF08 = [2, 1];
 const addSF08 = () => null;
 const teamsSF09 = [first[6], third[8]]; // BE - SN
 const goalsSF09 = [null, null];
