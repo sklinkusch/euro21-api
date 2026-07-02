@@ -646,7 +646,7 @@ const teamsSF09 = [first[6], third[8]]; // BE - SN
 const goalsSF09 = [3, 2];
 const addSF09 = (lang) => `(2:2) ${("ExtraTime", lang)}`;
 const teamsSF10 = [first[3], third[1]]; // US - BA
-const goalsSF10 = [null, null];
+const goalsSF10 = [2, 0];
 const addSF10 = () => null;
 const teamsSF11 = [first[7], second[9]]; // ES - AT
 const goalsSF11 = [null, null];
