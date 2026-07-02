@@ -643,8 +643,8 @@ const teamsSF08 = [first[11], third[10]]; // GB-ENG - CD
 const goalsSF08 = [2, 1];
 const addSF08 = () => null;
 const teamsSF09 = [first[6], third[8]]; // BE - SN
-const goalsSF09 = [null, null];
-const addSF09 = () => null;
+const goalsSF09 = [3, 2];
+const addSF09 = (lang) => `(2:2) ${("ExtraTime", lang)}`;
 const teamsSF10 = [first[3], third[1]]; // US - BA
 const goalsSF10 = [null, null];
 const addSF10 = () => null;
