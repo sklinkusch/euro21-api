@@ -24,7 +24,7 @@ const NEW_YORK = { city: "East Rutherford, NJ", country: "US" };
 const PHILADELPHIA = { city: "Philadelphia, PA", country: "US" };
 const DALLAS = { city: "Arlington, TX", country: "US" };
 const HOUSTON = { city: "Houston, TX", country: "US" };
-const SEATTLE = { city: "Seattle, WA", country: "WA" };
+const SEATTLE = { city: "Seattle, WA", country: "US" };
 
 const groupAMatches = [
   {
