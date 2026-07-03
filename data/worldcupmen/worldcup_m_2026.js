@@ -655,7 +655,7 @@ const teamsSF12 = [second[10], second[11]]; // PT - HR
 const goalsSF12 = [2, 1];
 const addSF12 = () => null;
 const teamsSF13 = [first[1], third[9]]; // CH - DZ
-const goalsSF13 = [null, null];
+const goalsSF13 = [2, 0];
 const addSF13 = () => null;
 const teamsSF14 = [second[3], second[6]]; // AU - EG
 const goalsSF14 = [null, null];
