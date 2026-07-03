@@ -24,7 +24,7 @@ const NEW_YORK = { city: "East Rutherford, NJ", country: "US" };
 const PHILADELPHIA = { city: "Philadelphia, PA", country: "US" };
 const DALLAS = { city: "Arlington, TX", country: "US" };
 const HOUSTON = { city: "Houston, TX", country: "US" };
-const SEATTLE = { city: "Seattle, WA", country: "WA" };
+const SEATTLE = { city: "Seattle, WA", country: "US" };
 
 const groupAMatches = [
   {
@@ -644,7 +644,7 @@ const goalsSF08 = [2, 1];
 const addSF08 = () => null;
 const teamsSF09 = [first[6], third[8]]; // BE - SN
 const goalsSF09 = [3, 2];
-const addSF09 = (lang) => `(2:2) ${("ExtraTime", lang)}`;
+const addSF09 = (lang) => `(2:2) ${localeName("ExtraTime", lang)}`;
 const teamsSF10 = [first[3], third[1]]; // US - BA
 const goalsSF10 = [2, 0];
 const addSF10 = () => null;
