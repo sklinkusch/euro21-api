@@ -659,10 +659,11 @@ const goalsSF13 = [2, 0];
 const addSF13 = () => null;
 const teamsSF14 = [second[3], second[6]]; // AU - EG
 const goalsSF14 = [2, 4];
-const addSF14 = (lang) => `${localeName("Penalties",lang)}, 1-1 (1-1) ${localeName("ExtraTime",lang)}`;
+const addSF14 = (lang) =>
+  `${localeName("Penalties", lang)}, 1:1 (1:1) ${localeName("ExtraTime", lang)}`;
 const teamsSF15 = [first[9], second[7]]; // AR - CV
 const goalsSF15 = [3, 2];
-const addSF15 = (lang) => `(2-2) ${localeName("ExtraTime",lang)}`;
+const addSF15 = (lang) => `(2:2) ${localeName("ExtraTime", lang)}`;
 const teamsSF16 = [first[10], third[11]]; // CO - GH
 const goalsSF16 = [1, 0];
 const addSF16 = () => null;
