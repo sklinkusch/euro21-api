@@ -664,7 +664,7 @@ const teamsSF15 = [first[9], second[7]]; // AR - CV
 const goalsSF15 = [3, 2];
 const addSF15 = (lang) => `(2-2) ${localeName("ExtraTime",lang)}`;
 const teamsSF16 = [first[10], third[11]]; // CO - GH
-const goalsSF16 = [null, null];
+const goalsSF16 = [1, 0];
 const addSF16 = () => null;
 
 const teamsAF1 = [
