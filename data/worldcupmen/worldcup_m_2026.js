@@ -671,53 +671,53 @@ const addSF16 = () => null;
 const teamsAF1 = [
   getKoTeam(teamsSF01, goalsSF01),
   getKoTeam(teamsSF04, goalsSF04)
-];
+]; // CA . MA
 const goalsAF1 = [0, 3];
 const addAF1 = () => null;
 const teamsAF2 = [
   getKoTeam(teamsSF03, goalsSF03),
   getKoTeam(teamsSF06, goalsSF06)
-];
+]; // PY - FR
 const goalsAF2 = [null, null];
 const addAF2 = () => null;
 const teamsAF3 = [
   getKoTeam(teamsSF02, goalsSF02),
   getKoTeam(teamsSF05, goalsSF05)
-];
+]; // BR - NO
 const goalsAF3 = [null, null];
 const addAF3 = () => null;
 const teamsAF4 = [
   getKoTeam(teamsSF07, goalsSF07),
   getKoTeam(teamsSF08, goalsSF08)
-];
+]; // MX - GB-ENG
 const goalsAF4 = [null, null];
 const addAF4 = () => null;
 const teamsAF5 = [
   getKoTeam(teamsSF12, goalsSF12),
   getKoTeam(teamsSF11, goalsSF11)
-];
+]; // PT - ES
 const goalsAF5 = [null, null];
 const addAF5 = () => null;
 const teamsAF6 = [
   getKoTeam(teamsSF10, goalsSF10),
   getKoTeam(teamsSF09, goalsSF09)
-];
+]; // US - BE
 const goalsAF6 = [null, null];
 const addAF6 = () => null;
 const teamsAF7 = [
   getKoTeam(teamsSF15, goalsSF15),
   getKoTeam(teamsSF14, goalsSF14)
-];
+]; // AR - EG
 const goalsAF7 = [null, null];
 const addAF7 = () => null;
 const teamsAF8 = [
   getKoTeam(teamsSF13, goalsSF13),
   getKoTeam(teamsSF16, goalsSF16)
-];
+]; // CH - CO
 const goalsAF8 = [null, null];
 const addAF8 = () => null;
 
-const teamsVF1 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF1, goalsAF1)];
+const teamsVF1 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF1, goalsAF1)]; // FR - MA
 const goalsVF1 = [null, null];
 const addVF1 = () => null;
 const teamsVF2 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF6, goalsAF6)];
