@@ -542,6 +542,7 @@ const data = (lang) => {
       }
     },
     T3: thirdTable,
+    T3Max: 3,
     AF: [
       {
         teams: teamsAF1,

@@ -801,6 +801,7 @@ const data = (lang) => {
       }
     },
     T3: thirdTable,
+    T3Max: 7,
     SF: [
       {
         teams: teamsSF01,
