@@ -678,7 +678,7 @@ const teamsAF2 = [
   getKoTeam(teamsSF03, goalsSF03),
   getKoTeam(teamsSF06, goalsSF06)
 ]; // PY - FR
-const goalsAF2 = [null, null];
+const goalsAF2 = [0, 1];
 const addAF2 = () => null;
 const teamsAF3 = [
   getKoTeam(teamsSF02, goalsSF02),
