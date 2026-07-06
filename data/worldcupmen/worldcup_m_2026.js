@@ -690,7 +690,7 @@ const teamsAF4 = [
   getKoTeam(teamsSF07, goalsSF07),
   getKoTeam(teamsSF08, goalsSF08)
 ]; // MX - GB-ENG
-const goalsAF4 = [null, null];
+const goalsAF4 = [2, 3];
 const addAF4 = () => null;
 const teamsAF5 = [
   getKoTeam(teamsSF12, goalsSF12),
