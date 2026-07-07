@@ -696,7 +696,7 @@ const teamsAF5 = [
   getKoTeam(teamsSF12, goalsSF12),
   getKoTeam(teamsSF11, goalsSF11)
 ]; // PT - ES
-const goalsAF5 = [null, null];
+const goalsAF5 = [0, 1];
 const addAF5 = () => null;
 const teamsAF6 = [
   getKoTeam(teamsSF10, goalsSF10),
