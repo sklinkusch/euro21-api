@@ -715,25 +715,26 @@ const teamsAF8 = [
   getKoTeam(teamsSF16, goalsSF16)
 ]; // CH - CO
 const goalsAF8 = [4, 3];
-const addAF8 = (lang) => `${localeName("Penalties",lang)}, 0:0 ${localeName("ExtraTime",lang)}`;
+const addAF8 = (lang) =>
+  `${localeName("Penalties", lang)}, 0:0 ${localeName("ExtraTime", lang)}`;
 
 const teamsVF1 = [getKoTeam(teamsAF2, goalsAF2), getKoTeam(teamsAF1, goalsAF1)]; // FR - MA
 const goalsVF1 = [2, 0];
 const addVF1 = () => null;
 const teamsVF2 = [getKoTeam(teamsAF5, goalsAF5), getKoTeam(teamsAF6, goalsAF6)]; // ES - BE
-const goalsVF2 = [null, null];
+const goalsVF2 = [2, 1];
 const addVF2 = () => null;
-const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF4, goalsAF4)];  // NO - GB-ENG
+const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF4, goalsAF4)]; // NO - GB-ENG
 const goalsVF3 = [null, null];
 const addVF3 = () => null;
-const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)];
+const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)]; // AR - CH
 const goalsVF4 = [null, null];
 const addVF4 = () => null;
 
-const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)];
+const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)]; // FR - ES
 const goalsHF1 = [null, null];
 const addHF1 = () => null;
-const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)];  // AR - CH
+const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)];
 const goalsHF2 = [null, null];
 const addHF2 = () => null;
 
@@ -741,7 +742,7 @@ const teams3P = [getLoser(teamsHF1, goalsHF1), getLoser(teamsHF2, goalsHF2)];
 const goals3P = [null, null];
 const add3P = () => null;
 
-const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)]; // ES - GB-ENG
+const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)];
 const goalsF = [null, null];
 const addF = () => null;
 
