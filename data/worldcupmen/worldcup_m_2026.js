@@ -726,13 +726,13 @@ const goalsVF2 = [2, 1];
 const addVF2 = () => null;
 const teamsVF3 = [getKoTeam(teamsAF3, goalsAF3), getKoTeam(teamsAF4, goalsAF4)]; // NO - GB-ENG
 const goalsVF3 = [1, 2];
-const addVF3 = (lang) => `(1:1) ${localeName("ExtraTime",lang)}`;
+const addVF3 = (lang) => `(1:1) ${localeName("ExtraTime", lang)}`;
 const teamsVF4 = [getKoTeam(teamsAF7, goalsAF7), getKoTeam(teamsAF8, goalsAF8)]; // AR - CH
 const goalsVF4 = [3, 1];
-const addVF4 = (lang) => `(1:1) ${localeName("ExtraTime",lang)}`;
+const addVF4 = (lang) => `(1:1) ${localeName("ExtraTime", lang)}`;
 
 const teamsHF1 = [getKoTeam(teamsVF1, goalsVF1), getKoTeam(teamsVF2, goalsVF2)]; // FR - ES
-const goalsHF1 = [null, null];
+const goalsHF1 = [0, 2];
 const addHF1 = () => null;
 const teamsHF2 = [getKoTeam(teamsVF3, goalsVF3), getKoTeam(teamsVF4, goalsVF4)]; // GB-ENG - AR
 const goalsHF2 = [null, null];
