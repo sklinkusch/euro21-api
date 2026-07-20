@@ -743,8 +743,8 @@ const goals3P = [4, 6];
 const add3P = () => null;
 
 const teamsF = [getKoTeam(teamsHF1, goalsHF1), getKoTeam(teamsHF2, goalsHF2)]; // ES - AR
-const goalsF = [null, null];
-const addF = () => null;
+const goalsF = [1, 0];
+const addF = (lang) => `${localeName("ExtraTime", lang)}`;
 
 const champion = getKoTeam(teamsF, goalsF);
 
